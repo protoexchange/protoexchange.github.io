@@ -1,0 +1,26 @@
+<div id="wrapper">
+
+  <div class="top_wrapper">
+    <div ng-include="'partials/common/top-bar.html'"></div>
+    <div ng-include="'partials/common/header.html'"></div>
+    <div ng-include="'partials/pages/welcome/slider.html'"></div>
+  </div>
+
+  <div ng-hide="true" ng-include="'partials/common/loading-container.html'"></div>
+
+  <div class="content-wrapper">
+
+    <div ng-include="'partials/pages/welcome/top-body.html'"></div>
+
+    <div class="body-wrapper">
+      <div ng-include="'partials/pages/welcome/1234-section.html'"></div>
+      <div ng-include="'partials/pages/welcome/blue-section.html'"></div>
+      <div ng-include="'partials/pages/welcome/team-section.html'"></div>
+    </div>
+
+    <div ng-include="'partials/pages/welcome/clients-section.html'"></div>
+    <div ng-include="'partials/common/footer.html'"></div>
+
+  </div>
+
+</div>
