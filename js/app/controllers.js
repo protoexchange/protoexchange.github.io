@@ -195,10 +195,6 @@ angular.module('shortcircuitIOApp.controllers', ['firebase.utils', 'simpleLogin'
 
 },420);
 
-
-
-
-
 }])
 
 .controller('ChatCtrl', ['$scope', 'messageList', function($scope, messageList) {

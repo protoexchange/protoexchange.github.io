@@ -16,6 +16,15 @@ angular.module('shortcircuitIOApp.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
+    '/how-it-works': {
+      templateUrl: 'partials/pages/how-it-works/how-it-works.html',
+      controller: 'HomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
     '/chat': {
       templateUrl: 'partials/pages/chat.html',
       controller: 'ChatCtrl'
