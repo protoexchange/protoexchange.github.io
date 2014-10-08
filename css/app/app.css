@@ -1,3 +1,6 @@
+#welcome-slide-0-bg {
+  -webkit-filter: blur(4px) brightness(0.5);	
+}
 #px-header-logo {
 	height: 95px;
 	margin-top: -16px;
@@ -8,10 +11,11 @@
 	margin-top: 16px;
 }
 
-#welcome-slider-brandname{
-	/*color: #fff;*/
-}
-
-.welcome-slider-bullet{
+#welcome-slider-slogan {
 	color: #fff;
 }
+
+#welcome-slider-one-line-pitch{
+	color: #fff;
+}
+
