@@ -3,7 +3,7 @@
 /* Directives */
 
 
-angular.module('shortcircuitIOApp.directives', ['simpleLogin'])
+angular.module('PX2App.directives', ['simpleLogin'])
 
   .directive('appVersion', ['version', function(version) {
     return function(scope, elm) {

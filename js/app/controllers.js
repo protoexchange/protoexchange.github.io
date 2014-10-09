@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('shortcircuitIOApp.controllers', ['firebase.utils', 'simpleLogin'])
+angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
 .controller('HomeCtrl', ['$scope', '$timeout', 'fbutil', 'user', 'FBURL', 
   function($scope, $timeout, fbutil, user, FBURL) {
     $scope.syncedValue = fbutil.syncObject('syncedValue');

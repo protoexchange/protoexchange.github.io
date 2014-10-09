@@ -1,14 +1,14 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module('shortcircuitIOApp', [
-    'shortcircuitIOApp.config',
-    'shortcircuitIOApp.controllers',
-    'shortcircuitIOApp.decorators',
-    'shortcircuitIOApp.directives',
-    'shortcircuitIOApp.filters',
-    'shortcircuitIOApp.routes',
-    'shortcircuitIOApp.services'
+angular.module('PX2App', [
+    'PX2App.config',
+    'PX2App.controllers',
+    'PX2App.decorators',
+    'PX2App.directives',
+    'PX2App.filters',
+    'PX2App.routes',
+    'PX2App.services'
   ])
 
   .run(['simpleLogin', function(simpleLogin) {

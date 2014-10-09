@@ -6,7 +6,7 @@
 *    <div ng-cloak>Authentication has resolved.</div>
 * </code>
 */
-angular.module('shortcircuitIOApp.decorators', ['firebase.utils', 'simpleLogin'])
+angular.module('PX2App.decorators', ['firebase.utils', 'simpleLogin'])
   .config(['$provide', function($provide) {
     // adapt ng-cloak to wait for auth before it does its magic
     $provide.decorator('ngCloakDirective', ['$delegate', 'simpleLogin',

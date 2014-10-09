@@ -1,6 +1,6 @@
 
 // a simple wrapper on Firebase and AngularFire to simplify deps and keep things DRY
-angular.module('firebase.utils', ['firebase', 'shortcircuitIOApp.config'])
+angular.module('firebase.utils', ['firebase', 'PX2App.config'])
    .factory('fbutil', ['$window', 'FBURL', '$firebase', function($window, FBURL, $firebase) {
       "use strict";
 

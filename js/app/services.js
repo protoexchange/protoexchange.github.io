@@ -3,7 +3,7 @@
 
    /* Services */
 
-   angular.module('shortcircuitIOApp.services', [])
+   angular.module('PX2App.services', [])
 
       // put your services here!
       // .service('serviceName', ['dependency', function(dependency) {}]);

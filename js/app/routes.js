@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('shortcircuitIOApp.routes', ['ngRoute', 'simpleLogin'])
+angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
 
   .constant('ROUTES', {
     '/welcome': {
