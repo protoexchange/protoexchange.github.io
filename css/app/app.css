@@ -76,4 +76,21 @@ background: #F5F5F5;
 	background: #fff;
 }
 
+.good-for{
+	color: green;
+}
+
+.good-for li:before{
+	color: green !important;
+}
+
+.bad-for {
+	color: red;
+	text-decoration: line-through;
+}
+.bad-for li:before{
+	color: red !important;
+}
+
+
 
