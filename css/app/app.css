@@ -18,6 +18,10 @@
 	margin-top: 16px;
 }
 
+#header{
+	border-bottom: 1px solid #CDCDCD;
+}
+
 #welcome-slider-slogan {
 	color: #fff;
 }
@@ -35,7 +39,7 @@
 	background-size: cover;
 	background-position: center; 
 	*/
-	background: #293D66;
+	background: #44596D;
 }
 
 #partners-cards-section{
@@ -99,13 +103,13 @@
 .good-for{
 }
 .good-for li:before{
-	color: green !important;
+	color: #2580b1 !important;
 }
 .bad-for {
 	text-decoration: line-through;
 }
 .bad-for li:before{
-	color: red !important;
+	color: #383838 !important;
 }
 .content-box {
 	padding: 8px;
@@ -120,4 +124,16 @@
 .partner-business-title{
 	font-size: 2em;
 }
+
+.p1-label{
+	color: #1E90FF !important;
+}
+.p1-banner{
+	background-color: #1E90FF !important;
+}
+
+.p1-rows i{
+	color: #1E90FF !important;
+}
+
 

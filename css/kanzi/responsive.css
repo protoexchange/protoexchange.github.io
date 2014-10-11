@@ -875,7 +875,7 @@
         float: right;
         display: block;
         padding: 4px 9px;
-        background-color: #279fbb;
+        background-color: #2580b1;
         position: absolute;
         top: 25px;
         right: 15px;
@@ -912,7 +912,7 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        background-color: #279fbb;
+        background-color: #2580b1;
         list-style-type: none;
         overflow: hidden;
         display: none;
