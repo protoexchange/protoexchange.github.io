@@ -31,17 +31,15 @@
         <div class="col-md-6 col-sm-6" ng-repeat="p in partners | filter: searchparam">
             <div class="content-box">  
 
-                <h2>
+                <h3>
                     <a href="http://{{p.website}}" target="_blank">
                         {{p.business}}
                     </a>
-                </h2>
+                </h3>
 
-                <h4>{{p.services}}</4>
-                    <hr/>
+                <p>{{p.services}}</p>
+
                 </div>
-
-
             </div>
         </div>
 
