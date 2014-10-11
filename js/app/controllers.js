@@ -3,8 +3,19 @@
 /* Controllers */
 
 angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
-.controller('HomeCtrl', ['$scope', '$timeout', 'fbutil', 'user', 'FBURL', 
-  function($scope, $timeout, fbutil, user, FBURL) {
+.controller('HomeCtrl', ['$scope', '$timeout', '$location', '$anchorScroll', 'fbutil', 'user', 'FBURL', 
+  function($scope, $timeout, $location, $anchorScroll, fbutil, user, FBURL) {
+
+
+    $scope.gotoServices = function() {
+        // set the location.hash to the id of
+        // the element you wish to scroll to.
+        $location.hash('services-section');
+        // call $anchorScroll()
+        $anchorScroll();
+      };
+
+
     $scope.syncedValue = fbutil.syncObject('syncedValue');
     $scope.user = user;
     $scope.FBURL = FBURL;
@@ -46,6 +57,8 @@ angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
     $('#masonry-elements,.portfolio-items').isotope('reLayout');
 
     $timeout(function(){
+
+      $anchorScroll();
 
       $('.navigation').AXMenu({
         showArrowIcon: true, // true for showing the menu arrow, false for hide them

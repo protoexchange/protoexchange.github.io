@@ -34,6 +34,15 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
+    '/request-assistant': {
+      templateUrl: 'partials/pages/request-assistant/request-assistant.html',
+      controller: 'HomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
     '/chat': {
       templateUrl: 'partials/pages/chat.html',
       controller: 'ChatCtrl'

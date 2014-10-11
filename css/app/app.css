@@ -47,10 +47,17 @@
 }
 
 #faq-banner{
-	background: url('../../images/unsplash/water.jpg');
+	background: url('../../images/sliders/solder.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center; 
+	background-position: center ; 
+}
+
+#request-assistant-banner{
+	background: url('../../images/unsplash/struct.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom; 
 }
 
 #get-started-section{
@@ -99,5 +106,9 @@
 	padding: 8px;
 }
 
+
+#request-assistant-typeform-widget {
+
+}
 
 
