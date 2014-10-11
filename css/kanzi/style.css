@@ -2072,7 +2072,7 @@ Callout box
 }
 
 .callout-box.image-box {
-    background-image: url("../images/call-out-box-bg.JPG");
+    background-image: url("../kanzi/images/call-out-box-bg.JPG");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;

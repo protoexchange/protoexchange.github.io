@@ -40,10 +40,12 @@ background: #F5F5F5;
 	z-index: -90;
 	width: 100%;
   	-webkit-filter: blur(4px) brightness(0.5);
-
 }
 #get-started-section{
-	background: #CDCDCD;
+	background: url('../../images/unsplash/apple.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
 }
 
 #top-companies-section{
