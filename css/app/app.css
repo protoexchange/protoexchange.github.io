@@ -43,10 +43,7 @@
 }
 
 #partners-content .content-box{
-	background: #d2d2d2;
-	margin: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
+	padding-bottom: 16px;
 }
 
 #pricing-banner{
@@ -72,10 +69,7 @@
 }
 
 #get-started-section{
-	background: url('../../images/unsplash/apple.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center; 
+	background: #303030;
 }
 #top-companies-section{
 	background: #fff;
@@ -123,5 +117,7 @@
 #partners-content{
 	background: #fff;
 }
-
+.partner-business-title{
+	font-size: 2em;
+}
 

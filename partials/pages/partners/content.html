@@ -12,13 +12,13 @@
             </div>
 
             
-             <input 
-             ng-model="searchparam" 
-             type="text" 
-             class="form-control" 
-             style='width: 50%; margin-left: auto; margin-right: auto'
-             placeholder="Search...">
-             <div class="space-sep40"></div>
+            <input 
+            ng-model="searchparam" 
+            type="text" 
+            class="form-control" 
+            style='width: 50%; margin-left: auto; margin-right: auto'
+            placeholder="Search...">
+            <div class="space-sep40"></div>
 
         </div>
     </div>
@@ -28,14 +28,21 @@
 <div class="row">
 
     <div class="container">
-        <div class="col-md-4 col-sm-4" ng-repeat="p in partners | filter: searchparam">
-            <a href="http://{{p.website}}" target="_blank">
-                <div class="content-box">  
-                    <span>{{p.business}}</span>
-                    <p>{{p.services}}</p>
-                </div>
-            </a>
-        </div>
-    </div>
+        <div class="col-md-6 col-sm-6" ng-repeat="p in partners | filter: searchparam">
+            <div class="content-box">  
 
-    <div class="space-sep40"></div>
+                <h2>
+                    <a href="http://{{p.website}}" target="_blank">
+                        {{p.business}}
+                    </a>
+                </h2>
+
+                <h4>{{p.services}}</4>
+                    <hr/>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="space-sep40"></div>
