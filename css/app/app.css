@@ -38,6 +38,21 @@
 	background: #293D66;
 }
 
+#pricing-banner{
+	background: url('../../images/unsplash/mountains.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
+
+}
+
+#faq-banner{
+	background: url('../../images/unsplash/water.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
+}
+
 #get-started-section{
 	background: url('../../images/unsplash/apple.jpg');
 	background-repeat: no-repeat;

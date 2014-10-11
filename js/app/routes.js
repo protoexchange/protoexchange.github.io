@@ -16,8 +16,17 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/how-it-works': {
-      templateUrl: 'partials/pages/how-it-works/how-it-works.html',
+    '/pricing': {
+      templateUrl: 'partials/pages/pricing/pricing.html',
+      controller: 'HomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
+    '/faq': {
+      templateUrl: 'partials/pages/faq/faq.html',
       controller: 'HomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {

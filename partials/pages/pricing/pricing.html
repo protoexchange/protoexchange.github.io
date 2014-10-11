@@ -1,0 +1,29 @@
+<div id="wrapper">
+
+  <div class="top_wrapper">
+
+    <div ng-include="'partials/common/top-bar.html'"
+    id="pricing-top-bar"></div>
+
+    <div 
+    ng-include="'partials/common/header.html'"
+    id="pricing-header"></div>
+
+     <div 
+     ng-include="'partials/pages/pricing/slider.html'"
+     id="pricing-slider"
+     ></div>
+
+  </div>
+
+  <div class="content-wrapper">
+    <div class="body-wrapper">
+      <div ng-include="'partials/pages/pricing/banner.html'"></div>
+      <div ng-include="'partials/pages/pricing/tiers.html'"></div>
+    </div>
+
+    <div ng-include="'partials/common/footer.html'"></div>
+
+  </div>
+
+</div>

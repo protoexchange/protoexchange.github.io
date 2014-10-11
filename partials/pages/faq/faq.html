@@ -1,0 +1,30 @@
+<div id="wrapper">
+
+  <div class="top_wrapper">
+
+    <div ng-include="'partials/common/top-bar.html'"
+    id="faq-top-bar"></div>
+
+    <div 
+    ng-include="'partials/common/header.html'"
+    id="faq-header"></div>
+
+     <div 
+     ng-include="'partials/pages/faq/slider.html'"
+     id="faq-slider"
+     ></div>
+
+  </div>
+
+  <div class="content-wrapper">
+    <div class="body-wrapper">
+       <div ng-include="'partials/pages/welcome/top-companies.html'"></div>
+      <div ng-include="'partials/pages/faq/content.html'"></div>
+      <div ng-include="'partials/common/get-started.html'"></div>
+    </div>
+
+    <div ng-include="'partials/common/footer.html'"></div>
+
+  </div>
+
+</div>
