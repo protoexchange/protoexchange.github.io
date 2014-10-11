@@ -3,10 +3,39 @@
 /* Controllers */
 
 angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
-.controller('HomeCtrl', ['$scope', '$timeout', '$location', '$anchorScroll', 'fbutil', 'user', 'FBURL', 
-  function($scope, $timeout, $location, $anchorScroll, fbutil, user, FBURL) {
+.controller('HomeCtrl', ['$scope', '$timeout', '$location', '$http', '$anchorScroll', 'fbutil', 'user', 'FBURL', 
+  function($scope, $timeout, $location, $http, $anchorScroll, fbutil, user, FBURL) {
 
+$scope.partners = [];
 
+$http.get('json/partners.json').
+  success(function(data, status, headers, config) {
+    // this callback will be called asynchronously
+    // when the response is available
+     // console.log(data, status); 
+      var partners = data.feed.entry;
+      for (var p in partners){
+        var partner = partners[p];
+       // console.log(partner.content)
+       var entry = partner.content.$t.replace("website: ", "{website:'");
+        entry = entry.replace(", services: ", "', services:'");
+        entry = entry.replace(", location: ", "', location:'");
+        entry = entry.replace(", category: ", "', category:'");
+        entry += "' }";
+        //console.log(entry)
+        var np = eval("(" + entry + ")");
+        np.business = partner.title.$t;
+        $scope.partners.push(np);
+      }
+      //console.log($scope.partners)
+  }).
+  error(function(data, status, headers, config) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+    console.log(data, status); 
+  });
+
+   
     $scope.gotoServices = function() {
         // set the location.hash to the id of
         // the element you wish to scroll to.
@@ -16,22 +45,22 @@ angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
       };
 
 
-    $scope.syncedValue = fbutil.syncObject('syncedValue');
-    $scope.user = user;
-    $scope.FBURL = FBURL;
+      $scope.syncedValue = fbutil.syncObject('syncedValue');
+      $scope.user = user;
+      $scope.FBURL = FBURL;
 
-    centeringBullets();
-    
-    var $masonryElement = $('#masonry-elements');
-    $masonryElement.isotope({
-      transformsEnabled: false,
-      masonry: {
-        columnWidth: 270,
-        gutterWidth: 15
-      }
-    });
+      centeringBullets();
 
-    $masonryElement.infinitescroll({
+      var $masonryElement = $('#masonry-elements');
+      $masonryElement.isotope({
+        transformsEnabled: false,
+        masonry: {
+          columnWidth: 270,
+          gutterWidth: 15
+        }
+      });
+
+      $masonryElement.infinitescroll({
         navSelector: '#masonry-elements-nav', // selector for the paged navigation
         nextSelector: '#masonry-elements-nav a:first', // selector for the NEXT link (to page 2)
         itemSelector: '.feature', // selector for all items you'll retrieve
@@ -54,56 +83,56 @@ angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
       });
     });
 
-    $('#masonry-elements,.portfolio-items').isotope('reLayout');
+      $('#masonry-elements,.portfolio-items').isotope('reLayout');
 
-    $timeout(function(){
+      $timeout(function(){
 
-      $anchorScroll();
+        $anchorScroll();
 
-      $('.navigation').AXMenu({
+        $('.navigation').AXMenu({
         showArrowIcon: true, // true for showing the menu arrow, false for hide them
         firstLevelArrowIcon: '',
         menuArrowIcon: ""
       });
 
 
-      /* Mobile Nav */
-      $('.header .mobile-nav ').append($('.navigation').html());
-      $('.header .mobile-nav li').bind('click', function(e) {
+        /* Mobile Nav */
+        $('.header .mobile-nav ').append($('.navigation').html());
+        $('.header .mobile-nav li').bind('click', function(e) {
 
-        var $this = $(this);
-        var $ulKid = $this.find('>ul');
-        var $ulKidA = $this.find('>a');
+          var $this = $(this);
+          var $ulKid = $this.find('>ul');
+          var $ulKidA = $this.find('>a');
 
-        if ($ulKid.length === 0 && $ulKidA[0].nodeName.toLowerCase() === 'a') {
-          window.location.href = $ulKidA.attr('href');
-        }
-        else {
-          $ulKid.toggle(0, function() {
-            if ($(this).css('display') === 'block') {
-              $ulKidA.find('.icon-chevron-down').removeClass('icon-chevron-down').addClass('icon-chevron-up');
-            }
-            else {
-              $ulKidA.find('.icon-chevron-up').removeClass('icon-chevron-up').addClass('icon-chevron-down');
-            }
-          });
-        }
+          if ($ulKid.length === 0 && $ulKidA[0].nodeName.toLowerCase() === 'a') {
+            window.location.href = $ulKidA.attr('href');
+          }
+          else {
+            $ulKid.toggle(0, function() {
+              if ($(this).css('display') === 'block') {
+                $ulKidA.find('.icon-chevron-down').removeClass('icon-chevron-down').addClass('icon-chevron-up');
+              }
+              else {
+                $ulKidA.find('.icon-chevron-up').removeClass('icon-chevron-up').addClass('icon-chevron-down');
+              }
+            });
+          }
 
-        e.stopPropagation();
+          e.stopPropagation();
 
-        return false;
-      });
+          return false;
+        });
 
-      $('.mobile-menu-button').click(function() {
-        $('.mobile-nav').toggle();
-      });
+        $('.mobile-menu-button').click(function() {
+          $('.mobile-nav').toggle();
+        });
 
-      $('.header .mobile-nav .icon-chevron-right').each(function() {
-        $(this).removeClass('icon-chevron-right').addClass('icon-chevron-down');
-      });
+        $('.header .mobile-nav .icon-chevron-right').each(function() {
+          $(this).removeClass('icon-chevron-right').addClass('icon-chevron-down');
+        });
 
-      
-      /* Revolution Slider */
+
+        /* Revolution Slider */
     //show until every thing loaded
     $('.rev-slider-fixed,.rev-slider-full').css('visibility', 'visible');
 
