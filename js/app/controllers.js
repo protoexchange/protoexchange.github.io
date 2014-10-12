@@ -6,27 +6,22 @@ angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
 .controller('HomeCtrl', ['$scope', '$timeout', '$location', '$http', '$anchorScroll', 'fbutil', 'user', 'FBURL', 
   function($scope, $timeout, $location, $http, $anchorScroll, fbutil, user, FBURL) {
 
-$scope.partners = [];
+$scope.manufacturingResources = [];
 
-$http.get('json/partners.json').
+$http.get('json/manufacturing-resources.json').
   success(function(data, status, headers, config) {
     // this callback will be called asynchronously
     // when the response is available
      // console.log(data, status); 
       var partners = data.feed.entry;
+
       for (var p in partners){
-        var partner = partners[p];
-       // console.log(partner.content)
-       var entry = partner.content.$t.replace("website: ", "{website:'");
-        entry = entry.replace(", services: ", "', services:'");
-        entry = entry.replace(", location: ", "', location:'");
-        entry = entry.replace(", category: ", "', category:'");
-        entry += "' }";
-        //console.log(entry)
-        var np = eval("(" + entry + ")");
-        np.business = partner.title.$t;
-        $scope.partners.push(np);
+        var data = partners[p].content.$t.split("json: ")[1];
+        data = data.split("} ")[0];
+        var np = eval("(" + data + ")");
+        $scope.manufacturingResources.push(np);
       }
+      console.log( $scope.manufacturingResources )
       //console.log($scope.partners)
   }).
   error(function(data, status, headers, config) {

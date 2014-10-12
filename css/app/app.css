@@ -136,4 +136,36 @@
 	color: #1E90FF !important;
 }
 
+.category-label{
+	margin-right: 10px;
+}
+
+.label-machining {
+	background-color: #206BA4;
+}
+
+.label-sheet-metal {
+	background-color: #BBD9EE;
+}
+
+.label-plastics {
+	background-color: #097054;
+}
+
+.label-electrical {
+	background-color: #FFDE00;
+}
+
+.label-mechanical-components {
+	background-color: #6599FF;
+}
+
+.label-packaging {
+	background-color: #6599FF;
+}
+
+.label-labels {
+	background-color: #2580b1;
+}
+
 

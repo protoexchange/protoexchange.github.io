@@ -43,8 +43,8 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/partners': {
-      templateUrl: 'partials/pages/partners/partners.html',
+    '/manufacturing-resources': {
+      templateUrl: 'partials/pages/manufacturing-resources/manufacturing-resources.html',
       controller: 'HomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
