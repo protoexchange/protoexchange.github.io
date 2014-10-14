@@ -64,6 +64,13 @@
 	background-position: center ; 
 }
 
+#contact-banner{
+	background: url('../../images/unsplash/apple.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
+}
+
 
 #partners-banner{
 	background: url('../../images/unsplash/struct.jpg');

@@ -8,6 +8,10 @@ angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
 
 $scope.manufacturingResources = [];
 
+$scope.leaveAMessage = function() {
+ olark('api.box.expand')
+}
+
 $http.get('json/manufacturing-resources.json').
   success(function(data, status, headers, config) {
     // this callback will be called asynchronously

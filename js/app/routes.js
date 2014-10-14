@@ -34,8 +34,8 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/request-assistant': {
-      templateUrl: 'partials/pages/request-assistant/request-assistant.html',
+    '/map': {
+      templateUrl: 'partials/pages/map/map.html',
       controller: 'HomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -43,8 +43,8 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/create-profile': {
-      templateUrl: 'partials/pages/create-profile/create-profile.html',
+    '/request': {
+      templateUrl: 'partials/pages/request/request-assistant.html',
       controller: 'HomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -52,8 +52,26 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/manufacturing-resources': {
-      templateUrl: 'partials/pages/manufacturing-resources/manufacturing-resources.html',
+    '/apply': {
+      templateUrl: 'partials/pages/apply/create-profile.html',
+      controller: 'HomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
+    '/resources': {
+      templateUrl: 'partials/pages/resources/resources.html',
+      controller: 'HomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
+    '/contact': {
+      templateUrl: 'partials/pages/contact/contact.html',
       controller: 'HomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
