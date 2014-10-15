@@ -43,8 +43,26 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/request': {
-      templateUrl: 'partials/pages/request/request-assistant.html',
+    '/request-protege': {
+      templateUrl: 'partials/pages/request/request-protege.html',
+      controller: 'HomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
+    '/request-professional': {
+      templateUrl: 'partials/pages/request/request-professional.html',
+      controller: 'HomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
+    '/request-executive': {
+      templateUrl: 'partials/pages/request/request-executive.html',
       controller: 'HomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
