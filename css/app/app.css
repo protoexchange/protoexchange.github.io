@@ -65,10 +65,11 @@
 }
 
 #contact-banner{
-	background: url('../../images/unsplash/apple.jpg');
+	background: url('../../images/brand/px-team-zoom.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center; 
+	background-position: center top; 
+	height: 420px;
 }
 
 
