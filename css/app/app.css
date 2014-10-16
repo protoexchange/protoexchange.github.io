@@ -114,9 +114,10 @@
 }
 .bad-for {
 	text-decoration: line-through;
+	color: #cdcdcd !important;
 }
 .bad-for li:before{
-	color: #383838 !important;
+	color: #cdcdcd !important;
 }
 .content-box {
 	padding: 8px;
