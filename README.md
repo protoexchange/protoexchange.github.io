@@ -1,7 +1,4 @@
-#ProtoExchange
-[ProtoExchange.com](http://ProtoExchange.com)
-
-![GitHub Logo](/images/brand/px.logo.ga.png)
+[![GitHub Logo](/images/brand/px.logo.ga.png)](http://ProtoExchange.com)
 
 ##What is ProtoExchange?
 
@@ -15,5 +12,6 @@ ProtoExchange is your personal engineering team. We're a community of clever & a
 ##Engineering Assistance with...
 Research & Organization | Design & Development | Manufacturing & Logistics
 ------------ | ------------- | -------------
-A | B | C
-A | B | C
+Hand off your time-sinking tasks to our engineers. Our Research, Analysis, Documentation & Design Reviews will benefit your entire team. | Accelerate your hardware design & development. Receive assistance with 3D Modeling, PCB Design & Embedded Development. | Streamline manufacturing operations. We're happy to help manage multiple RFQ/RFPs, order components, and provide logistics support.
+
+[Learn More](http://ProtoExchange.com/#!/welcome#services-section)
