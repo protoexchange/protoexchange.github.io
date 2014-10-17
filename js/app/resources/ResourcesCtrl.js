@@ -6,10 +6,33 @@ angular.module('PX2App.controllers', ['firebase.utils', 'simpleLogin'])
 .controller('HomeCtrl', ['$scope', '$timeout', '$location', '$http', '$anchorScroll', 'fbutil', 'user', 'FBURL', 
   function($scope, $timeout, $location, $http, $anchorScroll, fbutil, user, FBURL) {
 
+$scope.manufacturingResources = [];
+
 $scope.leaveAMessage = function() {
  olark('api.box.expand')
 }
 
+$http.get('json/manufacturing-resources.json').
+  success(function(data, status, headers, config) {
+    // this callback will be called asynchronously
+    // when the response is available
+     // console.log(data, status); 
+      var partners = data.feed.entry;
+
+      for (var p in partners){
+        var data = partners[p].content.$t.split("json: ")[1];
+        data = data.split("} ")[0];
+        var np = eval("(" + data + ")");
+        $scope.manufacturingResources.push(np);
+      }
+      console.log( $scope.manufacturingResources )
+      //console.log($scope.partners)
+  }).
+  error(function(data, status, headers, config) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+    console.log(data, status); 
+  });
 
    
     $scope.gotoServices = function() {
@@ -25,9 +48,42 @@ $scope.leaveAMessage = function() {
       $scope.user = user;
       $scope.FBURL = FBURL;
 
-    
+      centeringBullets();
 
-  
+      var $masonryElement = $('#masonry-elements');
+      $masonryElement.isotope({
+        transformsEnabled: false,
+        masonry: {
+          columnWidth: 270,
+          gutterWidth: 15
+        }
+      });
+
+      $masonryElement.infinitescroll({
+        navSelector: '#masonry-elements-nav', // selector for the paged navigation
+        nextSelector: '#masonry-elements-nav a:first', // selector for the NEXT link (to page 2)
+        itemSelector: '.feature', // selector for all items you'll retrieve
+        loading: {
+          finishedMsg: 'No more pages to load.',
+          img: 'images/loading.gif',
+          selector: '#loading',
+          speed: 'normal'
+        },
+        maxPage: 3
+      },
+    // call Isotope as a callback
+    function(newElements) {
+      embed_video_processing();
+      var $newElements = $(newElements);
+      $masonryElement.append($newElements);
+      $masonryElement.isotope('appended', $newElements);
+
+      $masonryElement.find('.cycle-slideshow').cycle({
+      });
+    });
+
+      $('#masonry-elements,.portfolio-items').isotope('reLayout');
+
       $timeout(function(){
 
         $anchorScroll();
@@ -135,8 +191,6 @@ $scope.leaveAMessage = function() {
       $('.searchbox', this).removeClass('searchbox-focus');
     });
 
-    stickyMenu();
-
     // Clients Carousel
     $(".clients-list").carouFredSel({
       items: {
@@ -180,16 +234,7 @@ $scope.leaveAMessage = function() {
             debug: false
           });
 
- $('body').append('<div id="to-top-button"> <i class="fa fa-angle-up"></i> </div>');
-
-
-    $('#to-top-button').click(function() {
-        $('body,html').animate({
-            scrollTop: 0
-        });
-    });
-
-},520);
+},420);
 
 }])
 

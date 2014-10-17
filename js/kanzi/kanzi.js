@@ -12,62 +12,6 @@ jQuery(document).ready(function($) {
     $('.testimonial-item').css('visibility', 'visible');
 
 
-    /* Tabs Init */
-    easyTabsZeina('.tab-container', {
-        animationSpeed: 'fast',
-        defaultTab: 'li:first-child',
-        tabs: 'ul>li'
-    });
-
-    $('.accordion .accordion-row:first-child .title').trigger('click');
-
-
-    if (document.getElementById('contact_map')) {
-        google.maps.event.addDomListener(window, 'load', contactusMap);
-    }
-
-
-    /* Portfolio PrettyPhoto */
-
-    $("a[data-rel^='prettyPhoto']").prettyPhoto({
-        animation_speed: 'fast', /* fast/slow/normal */
-        slideshow: 5000, /* false OR interval time in ms */
-        autoplay_slideshow: false, /* true/false */
-        opacity: 0.80  /* Value between 0 and 1 */
-    });
-
-
-    
-
-    
-
-
-    /* Accrodion */
-    zeinaAccordion('.accordion', true);
-
-
-    /* Init the plugin */
-
-
-    form_validation('#contact-form');
-    form_validation('#comment-form');
-
-    /* get in touch form valdiation */
-    $('#footer-contact-form').validate({
-        rules: {
-            name: "required"
-        }
-    });
-
-    /* to top button */
-    $('body').append('<div id="to-top-button"> <i class="fa fa-angle-up"></i> </div>');
-
-
-    $('#to-top-button').click(function() {
-        $('body,html').animate({
-            scrollTop: 0
-        });
-    });
 
 
     /* Info Box Listeners */
@@ -89,17 +33,11 @@ jQuery(document).ready(function($) {
     //place holder fallback
     //$('input, textarea').placeholder();
 
-
-    //process video posts
-    embed_video_processing();
-
     //init tooltip tipsy
     $('.social-media-icon,.tool-tip').tipsy({gravity: 's', fade: true, offset: 5});
 
-
     //Remove tipsy tooltip event from image overlay elements
     $('.item_img_overlay_content .social-media-icon,.top-bar .social-media-icon').unbind('mouseenter');
-
 
     //Callout Box And Message Box Mobile Button
     $('.message-box ,.callout-box').each(function() {
@@ -138,7 +76,6 @@ jQuery(document).ready(function($) {
 
     centeringBullets();
 
-
     var $cont = $('.portfolio-items');
 
     // IE 8
@@ -163,194 +100,8 @@ jQuery(document).ready(function($) {
         });
     }
 
-
-    $('.portfolio-filter-container a').click(function() {
-        $cont.isotope({
-            filter: this.getAttribute('data-filter')
-        });
-
-        return false;
-    });
-
-    var lastClickFilter = null;
-    $('.portfolio-filter a').click(function() {
-
-        //first clicked we don't know which element is selected last time
-        if (lastClickFilter === null) {
-            $('.portfolio-filter a').removeClass('portfolio-selected');
-        }
-        else {
-            $(lastClickFilter).removeClass('portfolio-selected');
-        }
-
-        lastClickFilter = this;
-        $(this).addClass('portfolio-selected');
-    });
-
-
 });
 
-
-/* Portfolio */
-
-var loaded = false, timeout = 20000;//loaded flag for timeout
-setTimeout(function() {
-    if (!loaded) {
-        hideLoading();
-    }
-}, timeout);
-
-$(window).load(function() {
-    loaded = true;
-    centeringBullets();
-
-    hideLoading();
-
-    var $masonryElement = $('#masonry-elements');
-    $masonryElement.isotope({
-        transformsEnabled: false,
-        masonry: {
-            columnWidth: 270,
-            gutterWidth: 15
-        }
-    });
-
-    $masonryElement.infinitescroll({
-        navSelector: '#masonry-elements-nav', // selector for the paged navigation
-        nextSelector: '#masonry-elements-nav a:first', // selector for the NEXT link (to page 2)
-        itemSelector: '.feature', // selector for all items you'll retrieve
-        loading: {
-            finishedMsg: 'No more pages to load.',
-            img: 'images/loading.gif',
-            selector: '#loading',
-            speed: 'normal'
-        },
-        maxPage: 3
-    },
-    // call Isotope as a callback
-    function(newElements) {
-        embed_video_processing();
-        var $newElements = $(newElements);
-        $masonryElement.append($newElements);
-        $masonryElement.isotope('appended', $newElements);
-
-        $masonryElement.find('.cycle-slideshow').cycle({
-        });
-    });
-
-    $('#masonry-elements,.portfolio-items').isotope('reLayout');
-});
-
-
-/* Loading functions */
-function hideLoading() {
-    $('.loading-container').remove();
-    $('.hide-until-loading').removeClass('hide-until-loading');
-}
-
-/**
- * This function used to add some features to easytabs  out of the box.
- * @param selector
- */
-function easyTabsZeina(selector, options) {
-    var $ref = $(selector);
-
-    $('.tab-container').css('visibility', 'visible');
-    options = options || {};
-    options['animationSpeed'] = options['animationSpeed'] || 'fast';
-    $ref.easytabs(options).bind('easytabs:midTransition', function() {
-        var $this = $(this), activeLink = $this.find('a.active'), offset = activeLink.offset();
-        $this.find('.section-tab-arrow').css('left', ((offset.left + (activeLink.outerWidth()) / 2) - 7) + 'px');
-    });
-
-    //trigger event on init
-    $ref.trigger('easytabs:midTransition');
-    $(window).load(function() {
-        $ref.trigger('easytabs:midTransition');
-    });
-
-}
-
-
-/* Contaact Map */
-var map;
-function contactusMap() {
-
-    var myLatlng, mapOptions, marker;
-    var myLatlng = new google.maps.LatLng(-37.817590, 144.965188);
-
-    mapOptions = {
-        zoom: 11,
-        center: myLatlng,
-        scrollwheel: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-    map = new google.maps.Map(document.getElementById('contact_map'), mapOptions);
-
-    marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title: 'Envato'
-    });
-}
-
-
-/**
- * Form Validation Helper
- */
-function form_validation(selector) {
-    var errorContainerOpen = '<div class="span1 error_container" ><div class="error-box">',
-            errorContainerClose = '<i class="icon-remove"></i></div></div>';
-    /* Contact From Validation */
-    $(selector).validate({
-        errorClass: "input_error",
-        errorElement: "span",
-        success: function(label, element) {
-
-        }
-    });
-
-}
-
-
-/**
- * Embed Video
- */
-function embed_video_processing() {
-
-    var youtube_template = '<iframe src="http://www.youtube.com/embed/{{id}}" frameborder="0" allowfullscreen=""  width="100%" height="100%" allowfullscreen></iframe>',
-            vimeo_template = '<iframe src="http://player.vimeo.com/video/{{id}}?color=ffffff" frameborder="0" allowfullscreen=""  width="100%" height="360"></iframe>',
-            soundcloud_template = '<iframe src="https://w.soundcloud.com/player/?url={{id}}" frameborder="0" allowfullscreen=""  width="100%" height="166"></iframe>',
-            template, id;
-
-    $('.blog-post-youtube,.blog-post-vimeo,.blog-post-soundcloud').each(function() {
-        id = false;
-
-        //youtube
-        if ($(this).hasClass('blog-post-youtube')) {
-            id = getYoutubeId($(this).attr('href'));
-            template = youtube_template;
-        }
-        //vimeo
-        else if ($(this).hasClass('blog-post-vimeo')) {
-            id = getVimeoId($(this).attr('href'));
-            template = vimeo_template;
-        }
-        //sound clound
-        else if ($(this).hasClass('blog-post-soundcloud')) {
-            id = $(this).attr('href');
-            template = soundcloud_template;
-        }
-
-        if (id !== false) {
-            //process the template
-            $(this).replaceWith(template.replace('{{id}}', id));
-        }
-
-    });
-
-}
 
 /***
  * Get youtube url.

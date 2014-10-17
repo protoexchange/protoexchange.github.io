@@ -9,12 +9,12 @@ ProtoExchange is your personal engineering team. We're a community of clever & a
 * Design Software & CAD Expertise
 
 
-##Engineering Assistance with...
+##Hardware Engineering Assistance with...
 Research & Organization | Design & Development | Manufacturing & Logistics
 ------------ | ------------- | -------------
 Hand off your time-sinking tasks to our engineers. Our Research, Analysis, Documentation & Design Reviews will benefit your entire team. | Accelerate your hardware design & development. Receive assistance with 3D Modeling, PCB Design & Embedded Development. | Streamline manufacturing operations. We're happy to help manage multiple RFQ/RFPs, order components, and provide logistics support.
 
-##Links
+##Shortcuts
 * [Services](http://app.ProtoExchange.com/#!/welcome#services-section)
 * [Pricing](http://app.ProtoExchange.com/#!/pricing)
 * [FAQ](http://app.ProtoExchange.com/#!/faq)
