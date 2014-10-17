@@ -14,4 +14,8 @@ Research & Organization | Design & Development | Manufacturing & Logistics
 ------------ | ------------- | -------------
 Hand off your time-sinking tasks to our engineers. Our Research, Analysis, Documentation & Design Reviews will benefit your entire team. | Accelerate your hardware design & development. Receive assistance with 3D Modeling, PCB Design & Embedded Development. | Streamline manufacturing operations. We're happy to help manage multiple RFQ/RFPs, order components, and provide logistics support.
 
-[Learn More](http://app.ProtoExchange.com/#!/welcome#services-section)
+##Links
+* [Services](http://app.ProtoExchange.com/#!/welcome#services-section)
+* [Pricing](http://app.ProtoExchange.com/#!/pricing)
+* [FAQ](http://app.ProtoExchange.com/#!/faq)
+* [Contact](http://app.ProtoExchange.com/#!/contact)
