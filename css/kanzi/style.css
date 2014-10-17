@@ -987,7 +987,7 @@ textarea .white-text .feature-details a:hover {
     height: 40px;
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 20px;
     cursor: pointer;
     overflow: hidden;
     opacity: .7;
@@ -1208,7 +1208,7 @@ Accordion
 }
 
 .accordion .open-icon {
-    background: no-repeat -26px -165px url("../images/sprites.png");
+    background: no-repeat -26px -165px url("../kanzi/images/sprites.png");
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -1216,7 +1216,7 @@ Accordion
 
 
 .accordion .close-icon {
-    background: no-repeat -26px -215px url("../images/sprites.png");
+    background: no-repeat -26px -215px url("../kanzi/images/sprites.png");
     width: 25px;
     height: 25px;
     top: 10px;
@@ -2822,42 +2822,42 @@ ul.icon-content-list-container li.icon-content-single .small .content-box-text {
 Custom Blog Icons
 ****************************/
 .post-type-sound {
-    background: no-repeat -1px -2px url("../images/sprites.png");
+    background: no-repeat -1px -2px url("../kanzi/images/sprites.png");
     width: 15px;
     height: 11px;
 }
 
 
 .post-type-video-icon {
-    background: no-repeat -5px -64px url("../images/sprites.png");
+    background: no-repeat -5px -64px url("../kanzi/images/sprites.png");
     width: 7px;
     height: 13px;
 }
 
 
 .post-type-post-icon {
-    background: no-repeat 0 -132px url("../images/sprites.png");
+    background: no-repeat 0 -132px url("../kanzi/images/sprites.png");
     width: 16px;
     height: 16px;
 }
 
 
 .post-type-link-icon {
-    background: no-repeat 0 -168px url("../images/sprites.png");
+    background: no-repeat 0 -168px url("../kanzi/images/sprites.png");
     width: 18px;
     height: 17px;
 }
 
 
 .post-type-quote-icon {
-    background: no-repeat 0 -212px url("../images/sprites.png");
+    background: no-repeat 0 -212px url("../kanzi/images/sprites.png");
     width: 16px;
     height: 16px;
 }
 
 
 .post-type-gallery-icon {
-    background: no-repeat 0 -32px url("../images/sprites.png");
+    background: no-repeat 0 -32px url("../kanzi/images/sprites.png");
     width: 17px;
     height: 12px;
 }
@@ -3111,7 +3111,7 @@ Footer
     position: absolute;
     left: -25px;
     top: 5px;
-    background: no-repeat -98px -1px url("../images/sprites.png");
+    background: no-repeat -98px -1px url("../kanzi/images/sprites.png");
     width: 16px;
     height: 13px;
 }
@@ -4784,7 +4784,7 @@ Search Box
     border: 0;
     width: 28px;
     text-align: center;
-    background: no-repeat -55px 0 url("../images/sprites.png");
+    background: no-repeat -55px 0 url("../kanzi/images/sprites.png");
     width: 27px;
     height: 17px;
 }

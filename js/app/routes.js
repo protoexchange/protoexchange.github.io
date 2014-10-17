@@ -5,7 +5,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
   .constant('ROUTES', {
     '/welcome': {
       templateUrl: 'partials/pages/welcome/welcome.html',
-      controller: 'HomeCtrl',
+      controller: 'WelcomeCtrl',
       resolve: {
         // forces the page to wait for this promise to resolve before controller is loaded
         // the controller can then inject `user` as a dependency. This could also be done
@@ -18,7 +18,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     },
     '/pricing': {
       templateUrl: 'partials/pages/pricing/pricing.html',
-      controller: 'HomeCtrl',
+      controller: 'PricingCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();
@@ -27,16 +27,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     },
     '/faq': {
       templateUrl: 'partials/pages/faq/faq.html',
-      controller: 'HomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/map': {
-      templateUrl: 'partials/pages/map/map.html',
-      controller: 'HomeCtrl',
+      controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();
@@ -45,7 +36,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     },
     '/request-protege': {
       templateUrl: 'partials/pages/request/request-protege.html',
-      controller: 'HomeCtrl',
+      controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();
@@ -54,7 +45,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     },
     '/request-professional': {
       templateUrl: 'partials/pages/request/request-professional.html',
-      controller: 'HomeCtrl',
+      controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();
@@ -63,7 +54,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     },
     '/request-executive': {
       templateUrl: 'partials/pages/request/request-executive.html',
-      controller: 'HomeCtrl',
+      controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();
@@ -72,7 +63,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     },
     '/apply': {
       templateUrl: 'partials/pages/apply/create-profile.html',
-      controller: 'HomeCtrl',
+      controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();
@@ -81,7 +72,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     },
     '/resources': {
       templateUrl: 'partials/pages/resources/resources.html',
-      controller: 'HomeCtrl',
+      controller: 'ResourcesCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();
@@ -98,15 +89,15 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/chat': {
-      templateUrl: 'partials/pages/chat.html',
+      templateUrl: 'partials/pages/chat/chat.html',
       controller: 'ChatCtrl'
     },
     '/login': {
-      templateUrl: 'partials/pages/login.html',
+      templateUrl: 'partials/pages/login/login.html',
       controller: 'LoginCtrl'
     },
     '/account': {
-      templateUrl: 'partials/pages/account.html',
+      templateUrl: 'partials/pages/account/account.html',
       controller: 'AccountCtrl',
       // require user to be logged in to view this route
       // the whenAuthenticated method below will resolve the current user
