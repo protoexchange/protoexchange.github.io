@@ -6,9 +6,7 @@
 .content-wrapper{
 	background: #fff;
 }
-#welcome-slide-0-bg {
-  -webkit-filter: blur(4px) brightness(0.5);	
-}
+
 #px-header-logo {
 	height: 95px;
 	margin-top: -16px;
@@ -24,10 +22,10 @@
 }
 
 #welcome-slider-slogan {
-	color: #fff;
+	font-size: .85em;
 }
 #welcome-slider-one-line-pitch{
-	color: #fff;
+	color: #000;
 	font-size: 1.75em;
 }
 .why-bullets {
@@ -40,7 +38,8 @@
 	background-size: cover;
 	background-position: center; 
 	*/
-	background: #44596D;
+	
+	background: #F8F8F8 ;
 }
 
 #partners-cards-section{
@@ -52,17 +51,20 @@
 }
 
 #pricing-banner{
-	background: url('../../images/unsplash/mountains.jpg');
+	background: url('../../images/sliders/pricing.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center; 
+	height: 520px;
 }
 
 #faq-banner{
-	background: url('../../images/sliders/solder.jpg');
+	background: url('../../images/sliders/faq.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center ; 
+	height: 520px;
+	
 }
 
 #contact-banner{
@@ -70,7 +72,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top; 
-	height: 420px;
+	height: 520px;
 }
 
 
@@ -88,8 +90,8 @@
 	background: #fff;
 }
 #why-px-engineer{
-	width: 420px;
-	margin-top: 100px;
+	height: 400px;
+	margin-top: 68px;
 }
 #mobile-menu-button{
 	-moz-border-radius: 8px;
@@ -107,6 +109,7 @@
 	border-radius: 8px;
 }
 #services-section{
+	border-top: 1px solid #CDCDCD;
 	background: #fff;
 }
 .good-for{
@@ -178,12 +181,44 @@
 	background-color: #2580b1;
 }
 
-#top-companies-section .client-image {
-    width: 40%;
+#top-companies-section  {
+    
 }
 
 .plan-info{
 	padding: 10px;
+}
+
+.rev-slider-full {
+    padding: 0px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    max-height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    clear: both;
+}
+
+
+#top-companies-section > div > div{
+	margin-top: 4px;
+}
+
+ul.bottom-body-clients li {
+    border: none;
+    height: 108px;
+    width: 164px;
+    border: none;
+    text-align: center;
+    float: none;
+    display: inline-block;
 }
 
 

@@ -34,8 +34,17 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/request-protege': {
-      templateUrl: 'partials/pages/request/request-protege.html',
+    '/request-flex': {
+      templateUrl: 'partials/pages/request/request-flex.html',
+      controller: 'WelcomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
+    '/request-personal': {
+      templateUrl: 'partials/pages/request/request-personal.html',
       controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -81,7 +90,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     },
     '/contact': {
       templateUrl: 'partials/pages/contact/contact.html',
-      controller: 'HomeCtrl',
+      controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();

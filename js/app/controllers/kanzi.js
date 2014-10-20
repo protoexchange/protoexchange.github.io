@@ -6,66 +6,64 @@ angular.module('PX2App.Kanzi', [])
 .controller('KanziCtrl', ['$scope', '$timeout', '$location', '$http', '$anchorScroll', 
   function($scope, $timeout, $location, $http, $anchorScroll) {
 
-$scope.leaveAMessage = function() {
- olark('api.box.expand')
-}
+    $scope.leaveAMessage = function() {
+     olark('api.box.expand')
+   }
 
-    $scope.gotoServices = function() {
-        // set the location.hash to the id of
-        // the element you wish to scroll to.
-        $location.hash('services-section');
-        // call $anchorScroll()
-        $anchorScroll();
-      };
-      
-      $timeout(function(){
 
-        $anchorScroll();
+   $scope.gotoServices = function() {
 
-        $('.navigation').AXMenu({
+    $location.hash("services");
+    $anchorScroll();
+  };
+
+
+  $timeout(function(){
+
+    $('.navigation').AXMenu({
         showArrowIcon: true, // true for showing the menu arrow, false for hide them
         firstLevelArrowIcon: '',
         menuArrowIcon: ""
       });
 
 
-        /* Mobile Nav */
-        $('.header .mobile-nav ').append($('.navigation').html());
-        $('.header .mobile-nav li').bind('click', function(e) {
+    /* Mobile Nav */
+    $('.header .mobile-nav ').append($('.navigation').html());
+    $('.header .mobile-nav li').bind('click', function(e) {
 
-          var $this = $(this);
-          var $ulKid = $this.find('>ul');
-          var $ulKidA = $this.find('>a');
+      var $this = $(this);
+      var $ulKid = $this.find('>ul');
+      var $ulKidA = $this.find('>a');
 
-          if ($ulKid.length === 0 && $ulKidA[0].nodeName.toLowerCase() === 'a') {
-            window.location.href = $ulKidA.attr('href');
+      if ($ulKid.length === 0 && $ulKidA[0].nodeName.toLowerCase() === 'a') {
+        window.location.href = $ulKidA.attr('href');
+      }
+      else {
+        $ulKid.toggle(0, function() {
+          if ($(this).css('display') === 'block') {
+            $ulKidA.find('.icon-chevron-down').removeClass('icon-chevron-down').addClass('icon-chevron-up');
           }
           else {
-            $ulKid.toggle(0, function() {
-              if ($(this).css('display') === 'block') {
-                $ulKidA.find('.icon-chevron-down').removeClass('icon-chevron-down').addClass('icon-chevron-up');
-              }
-              else {
-                $ulKidA.find('.icon-chevron-up').removeClass('icon-chevron-up').addClass('icon-chevron-down');
-              }
-            });
+            $ulKidA.find('.icon-chevron-up').removeClass('icon-chevron-up').addClass('icon-chevron-down');
           }
-
-          e.stopPropagation();
-
-          return false;
         });
+      }
 
-        $('.mobile-menu-button').click(function() {
-          $('.mobile-nav').toggle();
-        });
+      e.stopPropagation();
 
-        $('.header .mobile-nav .icon-chevron-right').each(function() {
-          $(this).removeClass('icon-chevron-right').addClass('icon-chevron-down');
-        });
+      return false;
+    });
+
+    $('.mobile-menu-button').click(function() {
+      $('.mobile-nav').toggle();
+    });
+
+    $('.header .mobile-nav .icon-chevron-right').each(function() {
+      $(this).removeClass('icon-chevron-right').addClass('icon-chevron-down');
+    });
 
 
-        /* Revolution Slider */
+    /* Revolution Slider */
     //show until every thing loaded
     $('.rev-slider-fixed,.rev-slider-full').css('visibility', 'visible');
 
@@ -170,16 +168,22 @@ $scope.leaveAMessage = function() {
             debug: false
           });
 
- $('body').append('<div id="to-top-button"> <i class="fa fa-angle-up"></i> </div>');
+zeinaAccordion('.accordion', true);
+
+$('body').append('<div id="to-top-button"> <i class="fa fa-angle-up"></i> </div>');
 
 
-    $('#to-top-button').click(function() {
-        $('body,html').animate({
-            scrollTop: 0
-        });
-    });
+$('#to-top-button').click(function() {
+  $('body,html').animate({
+    scrollTop: 0
+  });
+});
 
-},520);
+if($location.$$hash == "services"){
+      $scope.gotoServices()
+    }
+
+},0);
 
 }])
 
