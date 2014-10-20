@@ -51,7 +51,7 @@
 }
 
 #pricing-banner{
-	background: url('../../images/sliders/pricing.png');
+	background: url('../../images/banners/pricing.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center; 
@@ -59,7 +59,7 @@
 }
 
 #faq-banner{
-	background: url('../../images/sliders/faq.png');
+	background: url('../../images/banners/faq.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center ; 
