@@ -183,7 +183,7 @@ if($location.$$hash == "services"){
       $scope.gotoServices()
     }
 
-},0);
+},420);
 
 }])
 
