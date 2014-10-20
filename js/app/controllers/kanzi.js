@@ -168,11 +168,95 @@ angular.module('PX2App.Kanzi', [])
             debug: false
           });
 
+ $('.accordion .accordion-row:first-child .title').trigger('click');
 zeinaAccordion('.accordion', true);
 
 $('body').append('<div id="to-top-button"> <i class="fa fa-angle-up"></i> </div>');
 
+/*
+ * Zeina Accordion
+ * Written specially for Zeina Theme
+ */
+function zeinaAccordion(selector) {
 
+    $(document).on('click', selector + ' .accordion-row .title,' + selector + ' .accordion-row .open-icon', function() {
+
+        var me = this,
+                accordion = $(this).parents('.accordion'),
+                $prev,
+                $accRow = $(this),
+                $accTitle = $accRow.parent(), $this, icon, desc, title, activeRow,
+                $accRow = $accTitle.parent(),
+                toggle = accordion.data('toggle') == 'on' ? true : false;
+
+
+        if (toggle === true) {
+
+            icon = $accTitle.find('.open-icon');
+            desc = $accTitle.find('.desc');
+            title = $accTitle.find('.title');
+
+            if ($accTitle.find('.close-icon').length > 0) {
+                desc.slideUp('fast');
+                icon.removeClass('close-icon');
+                title.removeClass('active');
+            }
+            else {
+                desc.slideDown('fast');
+                icon.addClass('close-icon');
+                title.addClass('active');
+            }
+
+        }
+        else {
+            $accRow.find('.accordion-row').each(function() {
+
+                $this = $(this);
+                icon = $this.find('.open-icon');
+                desc = $this.find('.desc');
+                title = $this.find('.title');
+
+                /* if this the one which is clicked , slide up  */
+                if ($accTitle[0] != this) {
+                    desc.slideUp('fast');
+                    icon.removeClass('close-icon');
+                    title.removeClass('active');
+                }
+
+                else {
+                    desc.slideDown('fast');
+                    icon.addClass('close-icon');
+                    title.addClass('active');
+                }
+
+            });
+        }
+
+    });
+
+
+    // active div
+    $(selector).each(function() {
+
+        var $this = $(this), icon, desc, title, activeRow,
+                activeIndex = parseInt($this.data('active-index')),
+                activeIndex = activeIndex < 0 ? false : activeIndex;
+
+        if (activeIndex !== false) {
+            activeRow = $this.find('.accordion-row').eq(activeIndex);
+            icon = activeRow.find('.open-icon');
+            desc = activeRow.find('.desc');
+            title = activeRow.find('.title');
+
+            desc.slideDown('fast');
+            icon.addClass('close-icon');
+            title.addClass('active');
+        }
+
+    });
+
+
+}
 $('#to-top-button').click(function() {
   $('body,html').animate({
     scrollTop: 0
@@ -180,8 +264,8 @@ $('#to-top-button').click(function() {
 });
 
 if($location.$$hash == "services"){
-      $scope.gotoServices()
-    }
+  $scope.gotoServices()
+}
 
 },420);
 
