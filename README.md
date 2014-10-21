@@ -1,4 +1,4 @@
-[![GitHub Logo](/images/brand/px.logo.ga.png)](http://protoexchange.com)
+[![GitHub Logo](/images/brand/px.logo.ga.png)](https://protoexchange.com)
 
 ##What is ProtoExchange?
 
@@ -15,7 +15,7 @@ Research & Organization | Design & Development | Manufacturing & Logistics
 Hand off your time-sinking tasks to our engineers. Our Research, Analysis, Documentation & Design Reviews will benefit your entire team. | Accelerate your hardware design & development. Receive assistance with 3D Modeling, PCB Design & Embedded Development. | Streamline manufacturing operations. We're happy to help manage multiple RFQ/RFPs, order components, and provide logistics support.
 
 ##Learn More
-* [Services](http://protoexchange.com/#!/welcome#services)
-* [Pricing](http://protoexchange.com/#!/pricing)
-* [FAQ](http://protoexchange.com/#!/faq)
-* [Contact](http://protoexchange.com/#!/contact)
+* [Services](https://protoexchange.com/#!/welcome#services)
+* [Pricing](https://protoexchange.com/#!/pricing)
+* [FAQ](https://protoexchange.com/#!/faq)
+* [Contact](https://protoexchange.com/#!/contact)
