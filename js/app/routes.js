@@ -97,6 +97,24 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
+    '/terms': {
+      templateUrl: 'partials/pages/terms/terms.html',
+      controller: 'WelcomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
+    '/privacy': {
+      templateUrl: 'partials/pages/privacy/privacy.html',
+      controller: 'WelcomeCtrl',
+      resolve: {
+        user: ['simpleLogin', function(simpleLogin) {
+          return simpleLogin.getUser();
+        }]
+      }
+    },
     '/chat': {
       templateUrl: 'partials/pages/chat/chat.html',
       controller: 'ChatCtrl'
