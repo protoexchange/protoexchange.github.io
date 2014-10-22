@@ -7,6 +7,7 @@ angular.module('PX2App', [
     'PX2App.Pricing',
     'PX2App.Resources',
     'PX2App.Account',
+    'PX2App.Cancel',
     'PX2App.config',
     'PX2App.decorators',
     'PX2App.directives',

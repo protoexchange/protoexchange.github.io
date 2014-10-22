@@ -97,6 +97,11 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
+    '/cancel': {
+      templateUrl: 'partials/pages/cancel/cancel.html',
+      controller: 'CancelCtrl'
+    },
+    
     '/terms': {
       templateUrl: 'partials/pages/terms/terms.html',
       controller: 'WelcomeCtrl',
