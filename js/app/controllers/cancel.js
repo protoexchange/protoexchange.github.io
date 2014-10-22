@@ -10,6 +10,5 @@ angular.module('PX2App.Cancel', ['firebase.utils', 'simpleLogin'])
 			return $sce.trustAsResourceUrl('https://protoexchange.typeform.com/to/LOufER?email=' + email);
 		};
 
-		console.log("hello world!", $scope.email);
 	}])
 
