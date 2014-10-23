@@ -101,6 +101,10 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       templateUrl: 'partials/pages/cancel/cancel.html',
       controller: 'CancelCtrl'
     },
+    '/success': {
+      templateUrl: 'partials/pages/success/success.html',
+      controller: 'SuccessCtrl'
+    },
     
     '/terms': {
       templateUrl: 'partials/pages/terms/terms.html',
