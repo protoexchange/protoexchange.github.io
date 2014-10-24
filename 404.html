@@ -39,11 +39,11 @@
     ga('create', 'UA-56072007-1', { 'cookieDomain': 'none' });
   </script>
 
-  <div class="container text-center">
+  <div class="container text-center" style="margin-top: 200px;">
     <h2>Uhh ohh... 404...</h2>
     <a 
     class="btn btn-primary" href="/" 
-    onclick="ga('send', 'event', 'Error', '404');">Lame, get me outta here...</a>
+    onclick="ga('send', 'event', 'Error', '404', window.location.href);">Lame, get me outta here...</a>
   </div>
 
 
