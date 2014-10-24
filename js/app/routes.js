@@ -157,6 +157,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
     // to hack it directly onto the $routeProvider object
 
     $locationProvider.hashPrefix("!")
+    
     $routeProvider.whenAuthenticated = function(path, route) {
       route.resolve = route.resolve || {};
       route.resolve.user = ['requireUser', function(requireUser) {
