@@ -3,8 +3,8 @@
 angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
 
   .constant('ROUTES', {
-    '/welcome': {
-      templateUrl: 'partials/pages/welcome/welcome.html',
+    '/': {
+      templateUrl: 'partials/welcome/welcome.html',
       controller: 'WelcomeCtrl',
       resolve: {
         // forces the page to wait for this promise to resolve before controller is loaded
@@ -16,26 +16,8 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/pricing': {
-      templateUrl: 'partials/pages/pricing/pricing.html',
-      controller: 'PricingCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/faq': {
-      templateUrl: 'partials/pages/faq/faq.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
     '/request-flex': {
-      templateUrl: 'partials/pages/request/request-flex.html',
+      templateUrl: 'partials/request/request-flex.html',
       controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -44,7 +26,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/request-personal': {
-      templateUrl: 'partials/pages/request/request-personal.html',
+      templateUrl: 'partials/request/request-personal.html',
       controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -53,7 +35,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/request-professional': {
-      templateUrl: 'partials/pages/request/request-professional.html',
+      templateUrl: 'partials/request/request-professional.html',
       controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -62,7 +44,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/request-executive': {
-      templateUrl: 'partials/pages/request/request-executive.html',
+      templateUrl: 'partials/request/request-executive.html',
       controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -71,7 +53,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/apply': {
-      templateUrl: 'partials/pages/apply/create-profile.html',
+      templateUrl: 'partials/apply/create-profile.html',
       controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -79,17 +61,8 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/resources': {
-      templateUrl: 'partials/pages/resources/resources.html',
-      controller: 'ResourcesCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
     '/contact': {
-      templateUrl: 'partials/pages/contact/contact.html',
+      templateUrl: 'partials/contact/contact.html',
       controller: 'WelcomeCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
@@ -98,47 +71,12 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/cancel': {
-      templateUrl: 'partials/pages/cancel/cancel.html',
+      templateUrl: 'partials/cancel/cancel.html',
       controller: 'CancelCtrl'
     },
     '/success': {
-      templateUrl: 'partials/pages/success/success.html',
+      templateUrl: 'partials/success/success.html',
       controller: 'SuccessCtrl'
-    },
-    
-    '/terms': {
-      templateUrl: 'partials/pages/terms/terms.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/privacy': {
-      templateUrl: 'partials/pages/privacy/privacy.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/chat': {
-      templateUrl: 'partials/pages/chat/chat.html',
-      controller: 'ChatCtrl'
-    },
-    '/login': {
-      templateUrl: 'partials/pages/login/login.html',
-      controller: 'LoginCtrl'
-    },
-    '/account': {
-      templateUrl: 'partials/pages/account/account.html',
-      controller: 'AccountCtrl',
-      // require user to be logged in to view this route
-      // the whenAuthenticated method below will resolve the current user
-      // before this controller loads and redirect if necessary
-      authRequired: true
     }
   })
 
@@ -182,7 +120,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       }
     });
     // routes which are not in our map are redirected to /home
-    $routeProvider.otherwise({redirectTo: '/welcome'});
+    $routeProvider.otherwise({redirectTo: '/'});
   }])
 
   /**

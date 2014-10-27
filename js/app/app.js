@@ -4,9 +4,6 @@
 angular.module('PX2App', [
     'PX2App.Kanzi',
     'PX2App.Welcome',
-    'PX2App.Pricing',
-    'PX2App.Resources',
-    'PX2App.Account',
     'PX2App.Success',
     'PX2App.Cancel',
     'PX2App.config',

@@ -5,6 +5,21 @@
 angular.module('PX2App.Kanzi', [])
 .controller('KanziCtrl', ['$scope', '$timeout', '$location', '$http', '$anchorScroll', 
   function($scope, $timeout, $location, $http, $anchorScroll) {
+
+    function stickyMenu() {
+
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 35) {
+          $('#header').addClass('sticky-header');
+          $('.sticky-navigation,#to-top-button').fadeIn();
+        }
+        else {
+          $('#header').removeClass('sticky-header');
+          $('.sticky-navigation,#to-top-button').fadeOut();
+        }
+      });
+    }
+
     $('body').append('<div id="to-top-button"> <i class="fa fa-angle-up"></i> </div>');
 
 
@@ -127,48 +142,6 @@ angular.module('PX2App.Kanzi', [])
 
     stickyMenu();
 
-    // Clients Carousel
-    $(".clients-list").carouFredSel({
-      items: {
-        width: 170,
-        visible: {
-          min: 1,
-          max: 6
-        }
-      },
-      prev: {
-        button: function() {
-          return jQuery(this).closest('.row-fluid').find('.carousel-prev');
-        },
-        key: "left"
-      },
-      next: {
-        button: function() {
-          return jQuery(this).closest('.row-fluid').find('.carousel-next');
-        },
-        key: "right"
-      },
-      responsive: true,
-      auto: false,
-      scroll: {
-        onAfter: function() {
-                /**
-                 We have bug in chrome, and we need to force chrome to re-render specific portion of the page
-                 after it's complete the scrolling animation so this is why we add these dumb lines.
-                 */
-                 if (/chrome/.test(navigator.userAgent.toLowerCase())) {
-                  this.style.display = 'none';
-                  this.offsetHeight;
-                  this.style.display = 'block';
-                }
-
-              },
-              items: 1
-            }
-
-          }, {
-            debug: false
-          });
 
 $('.accordion .accordion-row:first-child .title').trigger('click');
 zeinaAccordion('.accordion', true);
@@ -260,12 +233,12 @@ zeinaAccordion('.accordion', true);
 
   }
 
- $('#to-top-button').click(function() {
+  $('#to-top-button').click(function() {
 
-      $('body,html').animate({
-        scrollTop: 0
-      });
+    $('body,html').animate({
+      scrollTop: 0
     });
+  });
   if($location.$$hash == "services"){
     $scope.gotoServices()
   }

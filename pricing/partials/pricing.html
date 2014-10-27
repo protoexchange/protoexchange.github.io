@@ -1,0 +1,28 @@
+<div id="wrapper" ng-controller="PricingCtrl" ng-cloak>
+
+  <div class="top_wrapper">
+
+
+    <div 
+    ng-include="'partials/header/header.html'"
+    id="pricing-header"></div>
+
+     <div 
+     ng-include="'pricing/partials/slider.html'"
+     id="pricing-slider"
+     ></div>
+
+  </div>
+
+  <div class="content-wrapper">
+    <div class="body-wrapper">
+      <div ng-include="'pricing/partials/banner.html'"></div>
+      <div ng-include="'pricing/partials/tiers.html'"></div>
+      <div id="services-2" ng-include="'partials/banners/have-questions.html'"></div>
+    </div>
+
+    <div ng-include="'partials/footer/footer.html'"></div>
+
+  </div>
+
+</div>
