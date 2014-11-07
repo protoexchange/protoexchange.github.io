@@ -222,5 +222,16 @@ ul.bottom-body-clients li {
 }
 
 
+.light-gray-bg{
+	background: #F8F8FF ;
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+.light-gray-bg .testimonial .testimonial-text {
+background-color: #fff;
+}
+
+
 
 
