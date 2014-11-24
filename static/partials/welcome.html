@@ -1,0 +1,233 @@
+<div id="wrapper" ng-controller="KanziCtrl">
+
+  <div class="top_wrapper">
+    <div ng-include="'static/partials/header.html'"></div>
+    <div id="welcome-slider" class="rev-slider-full">
+      <div class="rev-slider-banner-full  rev-slider-full">
+        <ul>
+          <li data-transition="fade" data-slotamount="7" data-masterspeed="300" >
+            <img id="welcome-slide-0-bg" src="static/images/stock/welcome.png" alt="rev-full1" data-fullwidthcentering="off">
+
+            <div class="tp-caption slider-text-title sft str"
+            data-x="0"
+            data-y="250"
+            data-speed="300"
+            data-start="800"
+            >
+            <span id="welcome-slider-slogan" class="white-text">Hardware Expertise</span>
+          </div>
+
+          <div class="tp-caption slider-text-description sfl str"
+          data-x="0"
+          data-y="300"
+          data-speed="200"
+          data-start="1100"
+          >
+          <span id="welcome-slider-one-line-pitch" class="white-text">Dedicated Engineering Assistance</span>
+        </div>
+
+        <div class="tp-caption slider-text-description sfl str"
+        data-x="0"
+        data-y="350"
+        data-speed="200"
+        data-start="1400"
+        >
+        <p class="lead white-text">
+          <em>Your personal engineering team.</em>
+        </p>
+      </div>
+
+      <div class="tp-caption slider-text-description sfl str"
+      data-x="0"
+      data-y="420"
+      data-speed="300"
+      data-start="1400"
+      >
+      <a ng-click="gotoServices()" class="btn btn-green btn-lg">Learn More</a>
+    </div>
+  </li>
+</ul>
+<div class="tp-bannertimer tp-bottom"></div>
+</div>
+</div>
+</div>
+
+<div class="content-wrapper">
+  <div class="body-wrapper">
+    <div ng-include="'static/partials/top-companies.html'"></div>
+    
+    <div id="why-proto-section" class="">
+
+      <div  class="container ">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 ">
+            <div class="space-sep100"></div>
+            <h2 class="">
+              What is ProtoExchange?
+            </h2>
+            
+            <h4 class="">
+              We're a community of clever &amp; articulate electrical and mechanical engineers. We're here to assist your team with hardware design &amp; development challenges, helping you stay on schedule and focused on your core product.
+            </h4>
+
+            <div class="why-bullets">
+              <h5 class="row">
+                <i class="fa fa-check-circle"></i>
+                Community of Professional Engineers
+              </h5>
+              <h5 class="row">
+                <i class="fa fa-check-circle"></i>
+                Industry &amp; Product Experience
+              </h5>
+              <h5 class="row">
+                <i class="fa fa-check-circle"></i>
+                Design Software &amp; CAD Expertise 
+              </h5>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-sm-6 ">
+            <div class="right-image-container">
+              <img id="why-px-engineer" class="pull-right" src="static/images/stock/engineer-crossed-arms-sm.png" alt="ProtoExchange Engineer"/>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div id="services-section">
+
+      <div class="container" id="services" style="padding-top: 180px; margin-top: -180px;">
+        <div class="space-sep40"></div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <h2 class="h2-section-title">Engineering Assistance with...</h2>
+
+            <div class="i-section-title">
+              <i class="icon-settings-streamline-2"></i>
+            </div>
+            <div class="space-sep20"></div>
+          </div>
+        </div>
+        <div class="row">    
+
+          <div class="col-md-4 col-sm-4">
+            <div class="content-box content-style1">
+              <h4 class="h4-body-title">
+                <i class="icon-notebook-streamline"></i>
+                <strong>Research</strong> &amp; Organization
+              </h4>
+              <div class="content-box-text ">
+                Hand off your time-sinking tasks to our engineers.
+                Our Research, Analysis, Documentation &amp; Design Reviews will benefit your entire team.
+              </div>
+
+              <div class="content-box-text ">
+                <hr/>
+                <ul class="icons-list check-1 colored-list good-for">
+                  <li>Requirements Specifications</li>
+                  <li>Schematic Design Review</li>
+                  <li>Component Library &amp Datasheet Management</li>
+                  <li>Bill of Materials Optimization</li>
+                  <li>Mechanical Design Review</li>
+                  <li>Electrical Design Review</li>
+                  <li>Firmware Review</li>
+                  <li>Compliance Research</li>
+                </ul>
+                <br/>
+                <ul class="icons-list remove colored-list bad-for">
+                  <li>Project Mangement</li>
+                  <li>Customer Relationship Management</li>
+                  <li>Marketing Research</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 col-sm-4">
+            <div class="content-box content-style1">
+              <h4 class="h4-body-title ">
+                <i class="icon-design-graphic-tablet-streamline-tablet"></i>
+                <strong>Design</strong> &amp; Development
+              </h4>
+              <div class="content-box-text ">
+                Accelerate your hardware design &amp; development.
+                Receive assistance with 3D Modeling, PCB Design &amp; Embedded Development. 
+              </div>
+
+              <div class="content-box-text" >
+                <hr/>
+                <ul class="icons-list check-1 colored-list good-for">
+                  <li>Technical Specification</li>
+                  <li>Schematic Symbol Libraries</li>
+                  <li>PCB Footprint Design &amp; Optimization</li>
+                  <li>Mechanical Enclosure Design</li>
+                  <li>Computational Modeling</li>
+                  <li>Embedded Development Assistance</li>
+                  <li>RF, NFC, RFID, Bluetooth &amp; WiFi Interface Design</li>
+                  <li>Design for Manufacturing Optimization</li>
+                </ul>
+                <br/>
+                <ul class="icons-list remove colored-list bad-for">
+                  <li>Full Product Development</li>
+                  <li>Industrial Design</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-4">
+            <div class="content-box content-style1">
+              <h4 class="h4-body-title ">
+                <i class="icon-factory-lift-streamline-warehouse"></i>
+                <strong>Manufacturing</strong> &amp; Logistics
+              </h4>
+              <div class="content-box-text ">
+                Streamline manufacturing operations. We're happy to help manage multiple RFQ/RFPs, order components, and provide logistics support.
+              </div>
+
+              <div class="content-box-text">
+                <hr/>
+                <ul class="icons-list check-1 colored-list good-for">
+                  <li>RFQ/RFP Management</li>
+                  <li>Manufacturing Cost Analysis</li>
+                  <li>Fufillment Research</li>
+                  <li>Component Purchasing</li>
+                  <li>PCB Assembly Management</li>
+                  <li>Testing &amp; Validation</li>
+                </ul>
+                <br/>
+                <ul class="icons-list remove colored-list bad-for">
+                  <li>Certifications</li>
+                  <li>High Volume Manufacturing</li>
+                  <li>Inventory Management</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="space-sep40"></div> 
+  </div>
+  
+</div>
+<div class="light-gray-bg" ng-include="'static/partials/testimonials.html'"></div>
+<div ng-include="'static/partials/get-started.html'"></div>
+</div>
+</div>
+
+<div ng-include="'static/partials/footer.html'"></div>
+
+</div>
+
+</div>

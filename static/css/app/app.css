@@ -1,0 +1,354 @@
+.body-wrapper{
+	padding-top: 0px;
+	background: #fff;
+	padding-bottom: 0px;
+}
+.content-wrapper{
+	background: #fff;
+}
+
+#px-header-logo {
+	height: 95px;
+	margin-top: -16px;
+	padding-bottom: 4px;
+}
+#header .navigation{
+	margin-top: 16px;
+}
+
+#header{
+	border-bottom: 1px solid #CDCDCD;
+	
+}
+
+#welcome-slider-slogan {
+	font-size: .85em;
+}
+#welcome-slider-one-line-pitch{
+	color: #000;
+	font-size: 1.75em;
+}
+.why-bullets {
+	padding: 16px;
+}
+#why-proto-section{
+	/*
+	background: url('../../images/stock/engineer-desk.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
+	*/
+	
+	background: #F8F8F8 ;
+}
+
+#partners-cards-section{
+	
+}
+
+#partners-content .content-box{
+	padding-bottom: 16px;
+}
+
+#pricing-banner{
+	background: url('../../images/stock/pricing.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
+	height: 520px;
+}
+
+#faq-banner{
+	background: url('../../images/stock/faq.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center ; 
+	height: 520px;
+	
+}
+
+#contact-banner{
+	background: url('../../images/brand/px-team-zoom.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top; 
+	height: 520px;
+}
+
+#partners-banner{
+	background: url('../../images/stock/struct.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom; 
+}
+
+#get-started-section{
+	background: #303030;
+}
+#top-companies-section{
+	background: #fff;
+}
+#why-px-engineer{
+	height: 400px;
+	margin-top: 68px;
+}
+#mobile-menu-button{
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	font-size: 2.5em;
+	padding: 16px;
+}
+.mobile-nav .searchbox-inputtext {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	padding: 4px;
+}
+.searchbox-inputtext-mobile{
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#services-section{
+	border-top: 1px solid #CDCDCD;
+	background: #fff;
+}
+.good-for{
+}
+.good-for li:before{
+	color: #2580b1 !important;
+}
+.bad-for {
+	text-decoration: line-through;
+	color: #cdcdcd !important;
+}
+.bad-for li:before{
+	color: #cdcdcd !important;
+}
+.content-box {
+	padding: 8px;
+}
+#request-assistant-typeform-widget {
+
+}
+#partners-content{
+	background: #fff;
+}
+.partner-business-title{
+	font-size: 2em;
+}
+.p1-label{
+	color: #1E90FF !important;
+}
+.p1-banner{
+	background-color: #1E90FF !important;
+}
+
+.p1-rows i{
+	color: #1E90FF !important;
+}
+.category-label{
+	margin-right: 10px;
+}
+.label-machining {
+	background-color: #206BA4;
+}
+.label-sheet-metal {
+	background-color: #BBD9EE;
+}
+.label-plastics {
+	background-color: #097054;
+}
+.label-electrical {
+	background-color: #FFDE00;
+}
+.label-mechanical-components {
+	background-color: #6599FF;
+}
+.label-packaging {
+	background-color: #6599FF;
+}
+.label-labels {
+	background-color: #2580b1;
+}
+
+#top-companies-section  {
+
+}
+
+.plan-info{
+	padding: 10px;
+}
+
+.rev-slider-full {
+	padding: 0px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 0;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	max-height: 100%;
+	overflow: hidden;
+	visibility: hidden;
+	left: 0;
+	top: 0;
+	clear: both;
+}
+
+
+#top-companies-section > div > div{
+	margin-top: 4px;
+}
+
+ul.bottom-body-clients li {
+	border: none;
+	height: 108px;
+	width: 164px;
+	border: none;
+	text-align: center;
+	float: none;
+	display: inline-block;
+}
+
+
+.light-gray-bg{
+	background: #F8F8F8 ;
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+.light-gray-bg .testimonial .testimonial-text {
+	background-color: #fff;
+}
+
+
+#success-stories-banner{
+	background: url('../../images/stock/success-stories-lol.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
+	height: 520px;
+}
+
+#atlas-wearables-banner{
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+	background: url('../../images/clients/atlas/atlas-push-ups.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center right; 
+	height: 420px;
+}
+
+#hammerhead-banner{
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.3), 
+		rgba(0, 0, 0, 0.3)
+		),
+	url('../../images/clients/hammerhead/hammerhead-product-2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center ; 
+	height: 420px;
+}
+
+#harvest-geek-banner{
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.3), 
+		rgba(0, 0, 0, 0.3)
+		),
+	url('../../images/clients/harvestgeek/harvestgeek-product.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center ; 
+	height: 420px;
+}
+
+#harvest-geek-logo{
+	width: 96px;
+	display: inline-block;
+	
+}
+.harvest-geek-brand{
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 3em;
+}
+
+.atlas-logo{
+	margin: 16px;
+
+}
+
+.padded {
+	padding: 16px;
+}
+
+.border-right{
+	border-right: 1px solid #CDCDCD;
+}
+.border-left{
+	border-left: 1px solid #CDCDCD;
+}
+#harvest-geek-info{
+	width: 500px;
+}
+
+#jobs-banner{
+	background: url('../../images/stock/solder-blur.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
+	height: 520px;
+}
+
+#sales-banner{
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.7), 
+		rgba(0, 0, 0, 0.7)
+		),
+	url('../../images/stock/lunch-work.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left; 
+	height: 420px;
+}
+
+#client-success-banner{
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.7), 
+		rgba(0, 0, 0, 0.7)
+		),
+	url('../../images/stock/success-stories-5.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top; 
+	height: 420px;
+}
+
+
+.txt-lg{
+	font-size: 1.25em;
+}
+
+.txt-xlg{
+	font-size: 2.25em;
+}
+
+._npr{
+	padding-right: 0 !important;
+}
+
+
+
