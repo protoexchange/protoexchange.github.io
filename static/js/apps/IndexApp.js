@@ -10,7 +10,7 @@ angular.module('PX2App', [
     'PX2App.decorators',
     'PX2App.directives',
     'PX2App.filters',
-    'PX2App.routes',
+    'PX2App.Routes',
     'PX2App.services',
     'angulartics',
     'angulartics.google.analytics'

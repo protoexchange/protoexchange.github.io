@@ -7,6 +7,12 @@ angular.module('PX2App.JobsCtrl', [])
   function($scope, $timeout, $location, $anchorScroll) {
 
 
+    $scope.gotoEngineeringAssistant = function() {
+
+      $location.hash("engineering-assistant");
+      $anchorScroll();
+    };
+
     $scope.gotoSales = function() {
 
       $location.hash("sales-and-marketing");
@@ -83,6 +89,10 @@ angular.module('PX2App.JobsCtrl', [])
 
     if ($location.$$hash == "sales-and-marketing"){
       $scope.gotoSales();
+    }
+
+    if ($location.$$hash == "engineering-assistant"){
+      $scope.gotoEngineeringAssistant();
     }
 
   },420);

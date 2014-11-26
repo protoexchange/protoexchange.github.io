@@ -3342,7 +3342,7 @@ This section container:
     height: auto;
     position: relative;
     background-size: 100% 1000px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .top-header {
@@ -4328,7 +4328,9 @@ Portfolio Single
     padding: 5px 20px;
     color: #b4b4b4;
     position: relative;
+    /*
     top: -5px !important;
+    */
     font-weight: 500;
     background-color: transparent;
     text-transform: uppercase;
@@ -4344,9 +4346,9 @@ Portfolio Single
 }
 
 .section-tabs .tab.active {
-    top: 0 !important;
+    /*top: 0 !important;*/
     background-color: transparent;
-    line-height: 20px;
+    /*line-height: 20px;*/
 }
 
 .section-tabs .tab a.active:after {
@@ -5963,7 +5965,7 @@ Social icons
     -moz-transition: height 0.3s;
     -o-transition: height 0.3s;
     transition: height 0.3s;
-    height: 35px;
+    height: 80px;
 }
 
 .sticky-header .navigation > li > a > span.label-nav {
@@ -5983,7 +5985,7 @@ Social icons
 }
 
 .sticky-header .navigation ul {
-    top: 40px;
+    top: 85px;
     -webkit-transition: top 0.3s;
     -moz-transition: top 0.3s;
     -o-transition: top 0.3s;

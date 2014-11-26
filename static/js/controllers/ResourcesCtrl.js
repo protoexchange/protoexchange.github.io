@@ -3,6 +3,10 @@ angular.module('PX2App.ResourcesCtrl', [])
 .controller('ResourcesCtrl', ['$scope', '$timeout', '$location', '$http',
   function($scope, $timeout, $location, $http) {
 
+    $scope.page = {
+      title: "Document Resources"
+    }
+
 $scope.manufacturingResources = [];
 
 $http.get('json/manufacturing-resources.json').
@@ -18,7 +22,7 @@ $http.get('json/manufacturing-resources.json').
         var np = eval("(" + data + ")");
         $scope.manufacturingResources.push(np);
       }
-      console.log( $scope.manufacturingResources )
+      //console.log( $scope.manufacturingResources )
       //console.log($scope.partners)
   }).
   error(function(data, status, headers, config) {

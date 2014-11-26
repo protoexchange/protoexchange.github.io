@@ -1,9 +1,9 @@
 "use strict";
 
-angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
+angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
 
   .constant('ROUTES', {
-    '/': {
+    '/welcome': {
       templateUrl: 'static/partials/welcome.html',
       controller: 'WelcomeCtrl',
       resolve: {
@@ -121,7 +121,7 @@ angular.module('PX2App.routes', ['ngRoute', 'simpleLogin'])
       }
     });
     // routes which are not in our map are redirected to /home
-    $routeProvider.otherwise({redirectTo: '/'});
+    $routeProvider.otherwise({redirectTo: '/welcome'});
   }])
 
   /**
