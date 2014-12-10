@@ -2,62 +2,62 @@
 
 angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
 
-  .constant('ROUTES', {
-    '/welcome': {
-      title: 'ProtoExchange.com',
-      templateUrl: 'static/partials/welcome.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
+.constant('ROUTES', {
+  '/welcome': {
+    title: 'ProtoExchange.com',
+    templateUrl: 'static/partials/welcome.html',
+    controller: 'WelcomeCtrl',
+    resolve: {
         // forces the page to wait for this promise to resolve before controller is loaded
         // the controller can then inject `user` as a dependency. This could also be done
         // in the controller, but this makes things cleaner (controller doesn't need to worry
         // about auth status or timing of displaying its UI components)
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/request-engineer': {
-      title: 'PX | Request Engineer',
-      templateUrl: 'static/partials/request-engineer.html',
-      controller: 'RequestEngineerCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/apply': {
-      title: 'PX | Apply to ProtoExchange',
-      templateUrl: 'static/partials/apply.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/contact': {
-      title: 'PX | Contact',
-      templateUrl: 'static/partials/contact.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/cancel': {
-      title: 'PX | Cancel Subscription',
-      templateUrl: 'static/partials/cancel.html',
-      controller: 'CancelCtrl'
-    },
-    '/success': {
-      title: 'PX | Subscription Complete',
-      templateUrl: 'static/partials/success.html',
-      controller: 'SuccessCtrl'
-    }
-  })
+user: ['simpleLogin', function(simpleLogin) {
+  return simpleLogin.getUser();
+}]
+}
+},
+'/request-engineer': {
+  title: 'PX | Request Engineer',
+  templateUrl: 'static/partials/request-engineer.html',
+  controller: 'RequestEngineerCtrl',
+  resolve: {
+    user: ['simpleLogin', function(simpleLogin) {
+      return simpleLogin.getUser();
+    }]
+  }
+},
+'/apply': {
+  title: 'PX | Apply to ProtoExchange',
+  templateUrl: 'static/partials/apply.html',
+  controller: 'WelcomeCtrl',
+  resolve: {
+    user: ['simpleLogin', function(simpleLogin) {
+      return simpleLogin.getUser();
+    }]
+  }
+},
+'/contact': {
+  title: 'PX | Contact',
+  templateUrl: 'static/partials/contact.html',
+  controller: 'WelcomeCtrl',
+  resolve: {
+    user: ['simpleLogin', function(simpleLogin) {
+      return simpleLogin.getUser();
+    }]
+  }
+},
+'/cancel-membership': {
+  title: 'PX | Cancel Membership',
+  templateUrl: 'static/partials/subscription.cancel.html',
+  controller: 'CancelCtrl'
+},
+'/membership-complete': {
+  title: 'PX | Membership Complete',
+  templateUrl: 'static/partials/subscription.completed.html',
+  controller: 'SuccessCtrl'
+}
+})
 
   /**
    * Adds a special `whenAuthenticated` method onto $routeProvider. This special method,
@@ -67,7 +67,7 @@ angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
    * dependency injection (see AuthCtrl), or rejects the promise if user is not logged in,
    * forcing a redirect to the /login page
    */
-  .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     // credits for this idea: https://groups.google.com/forum/#!msg/angular/dPr9BpIZID0/MgWVluo_Tg8J
     // unfortunately, a decorator cannot be use here because they are not applied until after
     // the .config calls resolve, so they can't be used during route configuration, so we have
@@ -109,7 +109,7 @@ angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
    * for changes in auth status which might require us to navigate away from a path
    * that we can no longer view.
    */
-  .run(['$rootScope', '$location', 'simpleLogin', 'ROUTES', 'loginRedirectPath',
+   .run(['$rootScope', '$location', 'simpleLogin', 'ROUTES', 'loginRedirectPath',
     function($rootScope, $location, simpleLogin, ROUTES, loginRedirectPath) {
       // watch for login status changes and redirect if appropriate
       simpleLogin.watch(check, $rootScope);
@@ -132,4 +132,4 @@ angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
         return ROUTES.hasOwnProperty(path) && ROUTES[path].authRequired;
       }
     }
-  ]);
+    ]);
