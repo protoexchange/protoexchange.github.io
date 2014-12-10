@@ -47,6 +47,12 @@
 .why-bullets {
 	padding: 16px;
 }
+
+.how-it-works-row{
+	background: #F8F8F8 ;
+
+}
+
 #why-proto-section{
 	/*
 	background: url('../../images/stock/engineer-desk.jpg');
@@ -54,7 +60,6 @@
 	background-size: cover;
 	background-position: center; 
 	*/
-	
 	background: #F8F8F8 ;
 }
 
@@ -181,10 +186,38 @@ ul.mobile-nav #nav-primary-cta .btn{
 .p1-rows i{
 	color: #1E90FF !important;
 }
-.category-label{
+.category-label, .industry-label{
 	margin-right: 10px;
+	background-color: #999;
 }
-.label-machining {
+.experience-label{
+	display: inline-block;
+	margin: 8px;
+	margin-left: 0;
+	background-color: #999;
+}
+
+.industry-label, .tool-label{
+	display: inline-block;
+	margin: 8px;
+	margin-left: 0;
+	background-color: #999;
+}
+
+.profession-label{
+	display: inline-block;
+	margin: 8px;
+	margin-left: 0;
+	background-color: #999;
+}
+
+.label-Electrical-Engineer{
+	background-color: #f0ad4e;
+}
+.label-Mechanical-Engineer{
+	background-color: #6599FF;
+}
+.label-machining, {
 	background-color: #206BA4;
 }
 .label-sheet-metal {
@@ -410,14 +443,65 @@ ul.bottom-body-clients li {
 	border-top: 1px solid #CDCDCD;
 	border-bottom: 1px solid #CDCDCD;
 	background: linear-gradient(
-		rgba(0, 0, 0, 0.3), 
-		rgba(0, 0, 0, 0.3)
+		rgba(0, 0, 0, 0.5), 
+		rgba(0, 0, 0, 0.5)
 		),
 	url('../../images/stock/engineer-computer.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center ; 
 	height: 420px;
+}
+
+#engineers-banner{
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.5), 
+		rgba(0, 0, 0, 0.5)
+		),
+	url('../../images/stock/solder.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center ; 
+	height: 420px;
+}
+
+#engineers-cta{
+
+	
+}
+.engineer-list-view{
+	
+	
+}
+
+.well-light-blue{
+	background-color: #BBD9EE;
+	width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.profile-cta-btn{
+	margin-top: 8px;
+	margin-left: 8px;
+
+}
+
+.profile-tray{
+
+}
+.profile-img{
+	
+}
+
+.profile-name{
+	
+}
+
+._npl{
+	padding-left: 0 !important;
 }
 
 

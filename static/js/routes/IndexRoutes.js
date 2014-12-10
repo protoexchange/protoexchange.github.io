@@ -4,6 +4,7 @@ angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
 
   .constant('ROUTES', {
     '/welcome': {
+      title: 'ProtoExchange.com',
       templateUrl: 'static/partials/welcome.html',
       controller: 'WelcomeCtrl',
       resolve: {
@@ -16,36 +17,10 @@ angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
         }]
       }
     },
-    '/request-flex': {
-      templateUrl: 'static/partials/request-flex.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/request-personal': {
-      templateUrl: 'static/partials/request-personal.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/request-professional': {
-      templateUrl: 'static/partials/request-professional.html',
-      controller: 'WelcomeCtrl',
-      resolve: {
-        user: ['simpleLogin', function(simpleLogin) {
-          return simpleLogin.getUser();
-        }]
-      }
-    },
-    '/request-executive': {
-      templateUrl: 'static/partials/request-executive.html',
-      controller: 'WelcomeCtrl',
+    '/request-engineer': {
+      title: 'PX | Request Engineer',
+      templateUrl: 'static/partials/request-engineer.html',
+      controller: 'RequestEngineerCtrl',
       resolve: {
         user: ['simpleLogin', function(simpleLogin) {
           return simpleLogin.getUser();
@@ -53,6 +28,7 @@ angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/apply': {
+      title: 'PX | Apply to ProtoExchange',
       templateUrl: 'static/partials/apply.html',
       controller: 'WelcomeCtrl',
       resolve: {
@@ -62,6 +38,7 @@ angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/contact': {
+      title: 'PX | Contact',
       templateUrl: 'static/partials/contact.html',
       controller: 'WelcomeCtrl',
       resolve: {
@@ -71,10 +48,12 @@ angular.module('PX2App.Routes', ['ngRoute', 'simpleLogin'])
       }
     },
     '/cancel': {
+      title: 'PX | Cancel Subscription',
       templateUrl: 'static/partials/cancel.html',
       controller: 'CancelCtrl'
     },
     '/success': {
+      title: 'PX | Subscription Complete',
       templateUrl: 'static/partials/success.html',
       controller: 'SuccessCtrl'
     }

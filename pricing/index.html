@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="static/css/kanzi/font-awesome.css">
   <link rel="stylesheet" href="static/css/kanzi/axfont.css">
 
-
   <link href='static/css/kanzi/style.css' rel='stylesheet' type='text/css'> 
   <link href='static/css/kanzi/responsive.css' rel='stylesheet' type='text/css'>
 
@@ -26,14 +25,9 @@
 
   <link href='static/css/app/app.css' rel='stylesheet' type='text/css'> 
 </head>
-
 <body ng-cloak ng-controller="KanziCtrl">
-
   <div id="wrapper" ng-controller="PricingCtrl"  ng-cloak>
-
     <div class="top_wrapper">
-
-
       <div 
       ng-include="'static/partials/header.html'"
       id="pricing-header"></div>
@@ -48,16 +42,13 @@
           <div class="row">
             <div class="col-md-12 col-sm-12  text-center">
               <h1 class="slider-text-title">
-                Plans &amp; Pricing
+                Pricing
               </h1>
             </div>
-
           </div>
         </div>
         <div class="space-sep100"></div>
       </div>
-
-
     </div>
 
     <div class="content-wrapper">
@@ -66,30 +57,45 @@
           <div class="center-text">
             <div class="space-sep20"></div>
             <h2 class="h2-section-title">
-              Try ProtoExchange <strong class="p1-label">risk free</strong> for 14 days.
+              First hour of consultation is <strong class="p1-label">free!</strong>
             </h2>
             <div class="space-sep20"></div>
           </div>
         </div>
 
-        <div class="container">
+        <div class="row section-content how-it-works-row">
+
+          <div class="container padded">
+            <div class="space-sep20"></div>
+
+            <h2>How it Works</h2>
+
+            <p class="lead">
+              1. We'll pair you with a hardware engineer who can assist.<br/>
+              2. Your engineer will log progress and hours in our dashboard.<br/>
+              3. Once work has been reviewed, you'll receive an invoice.
+            </p>
+          </div>
+        </div>
+
+        <div class="container padded">
 
           <div class="space-sep40"></div>
           <div class="row row-no-margin">
-            <div class="col-md-3 col-sm-3">
+            <div class="col-md-4 col-sm-4">
               <div class="price-table ">
                 <div class="price-table-header ">
 
                   <div class="price-label">
                     <div class="price-label-name" >
-                      Flex
+                      Junior
                     </div>
 
                   </div>
                   <div class="price-value">
-                    <div class="price-number">50</div>
+                    <div class="price-number">59</div>
                     <div class="price-unit">  $ </div>
-                    <div class="price-per"> / month</div>
+                    <div class="price-per"> / hour</div>
                   </div>
                 </div>
 
@@ -97,19 +103,19 @@
 
                  <div class="price-table-row">
                   <p class="plan-info">
-                    The Flex Plan is great for teams with dynamic or highly variable engineering tasks.
+                    Junior Engineers are CAD and Design Software wizards, perfect for small teams seeking assistance with simple engineering work.
                   </p>
                 </div>
                 <div class="price-table-row">
                   <span class="plan-feature">
-                    <strong>A Dedicated, Hardware Assistant</strong>
+                    <strong>A Dedicated, Hardware Engineer</strong>
                   </span>
                   <i class="t0-check fa fa-check-circle"></i>
                 </div>
 
                 <div class="price-table-row">
                   <span class="plan-feature">
-                    <strong>$100 per hour, Pay As You Go</strong>
+                    <strong>1-5 Years of Experience</strong>
                   </span>
                   <i class="t0-check fa fa-check-circle"></i>
                 </div>
@@ -128,45 +134,107 @@
 
               </div>
               <div class="price-table-row-bottom">
-                <a href="#!/request-flex" class="btn btn-flat">
-                  SIGNUP NOW
+                <a href="#!/request-engineer?t=junior" class="btn btn-flat">
+                  Request Engineer
                 </a>
               </div>    
             </div>               
           </div>
-          <div class="col-md-3 col-sm-3">
+          
+          <div class="col-md-4 col-sm-4">
             <div class="price-table ">
               <div class="price-table-header p1-banner">
 
+                <div class="price-label ">
+                  <div class="price-label-name p1-label">
+                    Professional
+                  </div>
+
+                </div>
+                <div class="price-value ">
+                  <div class="price-number">99</div>
+                  <div class="price-unit">  $ </div>
+                  <div class="price-per"> / hour</div>
+                </div>
+              </div>
+
+
+
+              <div class="price-table-rows p1-rows">
+
+                <div class="price-table-row">
+                  <p class="plan-info">
+                    Professional Engineers with industry and product experience make a good choice for teams seeking assistance with significant design &amp; development tasks. 
+                  </p>
+                </div>
+                <div class="price-table-row">
+                  <span class="plan-feature">
+                    <strong>A Dedicated, Hardware Engineer</strong>
+                  </span>
+                  <i class="t0-check fa fa-check-circle"></i>
+                </div>
+                <div class="price-table-row">
+                  <span class="plan-feature">
+                    <strong>5-10 Years of Experience</strong>
+                  </span>
+                  <i class="t0-check fa fa-check-circle"></i>
+                </div>
+
+                <div class="price-table-row">
+                  <span class="plan-feature">
+                    Video Consultation
+                  </span>
+                  <i class="t2-check fa fa-check-circle"></i>
+                </div>
+                <div class="price-table-row">
+                  <span class="plan-feature">
+                    Development Environment
+                  </span>
+                  <i class="t2-check fa fa-check-circle"></i>
+                </div>
+
+              </div>
+              <div class="price-table-row-bottom">
+                <a href="#!/request-engineer?t=professional" class="btn btn-flat p1-banner">
+                  Request Engineer
+                </a>
+              </div>    
+            </div>               
+          </div>
+
+          <div class="col-md-4 col-sm-4">
+            <div class="price-table ">
+              <div class="price-table-header ">
+
                 <div class="price-label">
-                  <div class="price-label-name p1-label" >
-                    Personal
+                  <div class="price-label-name " >
+                    Expert
                   </div>
 
                 </div>
                 <div class="price-value">
-                  <div class="price-number">950</div>
+                  <div class="price-number">129</div>
                   <div class="price-unit">  $ </div>
-                  <div class="price-per"> / month</div>
+                  <div class="price-per"> / hour</div>
                 </div>
               </div>
 
-              <div class="price-table-rows p1-rows">
+              <div class="price-table-rows">
 
                <div class="price-table-row">
                 <p class="plan-info">
-                  The Personal Plan is great for small teams seeking assistance with simple engineering work.
+                  Expert Engineers are design software gurus with industry and product experience covering the full spectrum of research, design, and manufacturing.
                 </p>
               </div>
               <div class="price-table-row">
                 <span class="plan-feature">
-                  <strong>A Dedicated, Hardware Assistant</strong>
+                  <strong>A Dedicated, Hardware Engineer</strong>
                 </span>
                 <i class="t0-check fa fa-check-circle"></i>
               </div>
               <div class="price-table-row">
                 <span class="plan-feature">
-                  <strong>Up to 10 Hours</strong>
+                  <strong>10+ Years of Experience</strong>
                 </span>
                 <i class="t0-check fa fa-check-circle"></i>
               </div>
@@ -186,135 +254,12 @@
 
             </div>
             <div class="price-table-row-bottom">
-              <a href="#!/request-personal" class="btn btn-flat p1-banner">
-                SIGNUP NOW
+              <a href="#!/request-engineer?t=expert" class="btn btn-flat ">
+                Request Engineer
               </a>
             </div>    
           </div>               
         </div>
-        <div class="col-md-3 col-sm-3">
-          <div class="price-table ">
-            <div class="price-table-header ">
-
-              <div class="price-label ">
-                <div class="price-label-name ">
-                  Professional
-                </div>
-
-              </div>
-              <div class="price-value ">
-                <div class="price-number">2,250</div>
-                <div class="price-unit">  $ </div>
-                <div class="price-per"> / month</div>
-
-              </div>
-            </div>
-
-
-
-            <div class="price-table-rows ">
-
-              <div class="price-table-row">
-                <p class="plan-info">
-                  The Professional Plan is a good choice for teams seeking assistance with significant design &amp; development tasks. 
-                </p>
-              </div>
-              <div class="price-table-row">
-                <span class="plan-feature">
-                  <strong>A Dedicated, Hardware Assistant</strong>
-                </span>
-                <i class="t0-check fa fa-check-circle"></i>
-              </div>
-              <div class="price-table-row">
-                <span class="plan-feature">
-                  <strong>Up to 25 Hours</strong>
-                </span>
-                <i class="t0-check fa fa-check-circle"></i>
-              </div>
-
-              <div class="price-table-row">
-                <span class="plan-feature">
-                  Video Consultation
-                </span>
-                <i class="t2-check fa fa-check-circle"></i>
-              </div>
-              <div class="price-table-row">
-                <span class="plan-feature">
-                  Development Environment
-                </span>
-                <i class="t2-check fa fa-check-circle"></i>
-              </div>
-
-            </div>
-            <div class="price-table-row-bottom">
-              <a href="#!/request-professional" class="btn btn-flat ">
-                SIGNUP NOW
-              </a>
-            </div>    
-          </div>               
-        </div>
-        <div class="col-md-3 col-sm-3">
-          <div class="price-table ">
-            <div class="price-table-header">
-
-              <div class="price-label">
-                <div class="price-label-name">
-                  Executive
-                </div>
-
-              </div>
-              <div class="price-value">
-                <div class="price-number">4,250</div>
-                <div class="price-unit">  $ </div>
-                <div class="price-per"> / month</div>
-
-              </div>
-            </div>
-
-            <div class="price-table-rows">
-              <div class="price-table-row">
-                <p class="plan-info">
-                  The Executive Plan is for extensive tasks covering the full spectrum of research, design, and manufacturing.
-
-                </p>
-              </div>
-              <div class="price-table-row">
-                <span class="plan-feature">
-                  <strong>A Dedicated, Hardware Assistant</strong>
-                </span>
-                <i class="t0-check fa fa-check-circle"></i>
-              </div>
-              <div class="price-table-row">
-                <span class="plan-feature">
-                  <strong>Up to 50 Hours</strong>
-                  <i class="t0-check fa fa-check-circle"></i>
-                </span>
-              </div>
-
-              <div class="price-table-row">
-                <span class="plan-feature">
-                  Video Consultation
-                </span>
-                <i class="t3-check fa fa-check-circle"></i>
-              </div>
-              <div class="price-table-row">
-                <span class="plan-feature">
-                  Development Environment
-                </span>
-                <i class="t3-check fa fa-check-circle"></i>
-              </div>
-
-
-            </div>
-            <div class="price-table-row-bottom">
-              <a href="#!/request-executive" class="btn btn-flat">
-                SIGNUP NOW
-              </a>
-            </div>    
-          </div>               
-        </div>
-
-
       </div>
     </div>
     <div class="space-sep100"></div>

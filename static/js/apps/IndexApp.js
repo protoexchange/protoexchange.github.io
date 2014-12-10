@@ -3,6 +3,7 @@
 // Declare app level module which depends on filters, and services
 angular.module('PX2App', [
     'PX2App.Kanzi',
+    'PX2App.RequestEngineer',
     'PX2App.Welcome',
     'PX2App.Success',
     'PX2App.Cancel',
@@ -18,4 +19,9 @@ angular.module('PX2App', [
 
   .run(['simpleLogin', function(simpleLogin) {
     simpleLogin.getUser();
-  }]);
+  }])
+  .run(['$location', '$rootScope', function($location, $rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.pageTitle = current.$$route.title;
+    });
+}]);

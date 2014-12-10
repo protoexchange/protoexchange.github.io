@@ -1,0 +1,163 @@
+<div id="wrapper" ng-controller="EngineersCtrl">
+
+	<div class="top_wrapper">
+
+		<div 
+		ng-include="'static/partials/header.html'"
+		id="manufacturing-resources-header"></div>
+
+	</div>
+
+	<div id="engineers-banner" class="" >
+		<div class="space-sep100"></div>
+		<div class="space-sep100"></div>
+		
+		<div class="space-sep40"></div>
+		<div  class="container white-text">
+			<div class="row">
+				<div class="col-md-12 col-sm-12  text-center">
+					<h1 class="slider-text-title">
+						Hardware Engineers
+					</h1>
+				</div>
+
+			</div>
+		</div>
+		<div class="space-sep100"></div>
+	</div>
+
+	<div class="row" id="engineers-cta">
+		<div class="space-sep40"></div>
+
+		<h2 class="h2-section-title">
+			Get help from experienced engineers.
+		</h2>
+
+		<div class="i-section-title">
+			<i class="icon-speech-streamline-talk-user"></i>
+		</div>
+
+		<input 
+		ng-model="searchparam" 
+		type="text" 
+		class="form-control" 
+		style='width: 50%; margin-left: auto; margin-right: auto; z-index: 999;'
+		placeholder="Try searching for pcb or 3d printing...">
+		<div class="space-sep40"></div>
+	</div>
+
+	<div class="row engineer-list-view padded" ng-repeat="v in engineerData | filter: searchparam">
+		<div class="container padded" ng-class="{'well':v.showMore}">
+			
+			<div class="col-md-12 col-sm-12">
+
+				<h3 class="profile-name">
+					<span class="pull-right">
+						<span ng-repeat="t in v.tags" class="profession-label label label-{{t}} labe-warning ">
+							{{t}}
+						</span> 
+					</span>
+					<br/>
+					{{v.firstName}} {{v.lastName}}
+					<br/>
+				</h3>
+
+				<h5>
+					{{v.background | limitTo : bioLength}}
+					<span ng-show="isTruncated(v)">...</span>
+				</h5>
+
+				<div class="col-md-3 col-sm-3 _npl">
+					<h4>
+						<small>INDUSTRIES</small><br/>
+						<span
+						ng-repeat="i in v.industries.slice(0, $parent.listLength)"
+						class="industry-label label label-{{i}} ">
+						{{i}}
+					</span> 
+
+					<span
+					ng-show="isShortened(v.industries)"
+					class="">
+					...
+				</span> 
+			</h4>
+		</div>
+
+
+
+		<div class="col-md-6 col-sm-6">
+			<h4>
+				<small>EXPERTISE</small><br/>
+				<span
+				ng-repeat="e in v.experience.slice(0, $parent.listLength)"
+				class="experience-label label label-{{e}}">
+				{{e}}
+			</span> 
+
+			<span
+			ng-show="isShortened(v.experience)"
+			class="">
+			...
+		</span> 
+	</h4>
+
+</div>
+
+<div class="col-md-3 col-sm-3">
+	<h4>
+		<small>TOOLS</small><br/>
+		<span
+		ng-repeat="t in v.tools.slice(0, $parent.listLength)"
+		class="tool-label label label-{{t}}">
+		{{t}}
+	</span> 
+	<span
+	ng-show="isShortened(v.tools)"
+	class="">
+	...
+</span> 
+</h4>
+</div>
+
+</div>
+
+<div class="col-md-12 col-sm-12 text-center">
+	<div ng-show="v.showMore" class="">
+
+		<p class="lead profile-cta-text">
+			Need engineering assistance?
+
+			<a href="#!/request-engineer?e={{v.slug}}" class="btn btn-sm profile-cta-btn btn-green">
+				Hire {{v.firstName}}
+			</a>
+		</p>
+		
+
+	</div>
+
+	<div class="profile-tray">
+		<a ng-click="readMore(v)" href="" class=" read-more">
+			<i ng-hide="v.showMore" class="fa fa-chevron-down"></i>  
+			<span ng-hide="v.showMore">READ MORE</span>
+			<i ng-show="v.showMore" class="fa fa-chevron-up"></i> 
+			<span ng-show="v.showMore">READ LESS</span>
+		</a>
+	</div>
+
+	
+<hr/>
+</div>
+
+
+
+</div>
+</div>
+</div>
+
+<div ng-include="'static/partials/get-started.html'"></div>
+<div ng-include="'static/partials/footer.html'"></div>
+
+</div>
+
+</div>
