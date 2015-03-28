@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title ng-bind="pageTitle">ProtoExchange</title>
+  <title>ProtoExchange</title>
+  <base href="/">
 
-  <meta name="description" content="ProtoExchange is your personal Engineering Team.">
-  <meta name="keywords" content="Hardware,Engineering,Electrical,Mechanical,Design Review, PCB Layout,BOM Management,RFQ Management">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" type="image/png" href="static/images/brand/favicon.png" />
   
-  <link rel="stylesheet" href="static/css/kanzi/revolution_settings.css">
   <link rel="stylesheet" href="static/css/kanzi/bootstrap.css">
   <link rel="stylesheet" href="static/css/kanzi/font-awesome.css">
   <link rel="stylesheet" href="static/css/kanzi/axfont.css">
@@ -25,62 +24,76 @@
   <link href='static/css/kanzi/fonts/ralway.css' rel='stylesheet' type='text/css'>
 
   <link href='static/css/app/app.css' rel='stylesheet' type='text/css'> 
+
 </head>
 
 <body ng-cloak>
 
-  <div ng-view></div>
+  <div id="wrapper" ng-controller="HoldingPatternCtrl" ng-cloak>
 
-  <script src="static/libs/jquery/jquery.min.js"></script>
+    <div class="content-wrapper">
+      <div class="body-wrapper">
+        <div class="space-sep40"></div>
 
-  <script src="static/libs/angular/angular.js"></script>
-  <script src="static/libs/angular/angular-route.js"></script>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 ">
+            <h2 class="h2-section-title">ProtoExchange</h2>
+            <div class="i-section-title">
+              <i class="icon-settings-streamline-2"></i>
+            </div>
+            <div class="space-sep20"></div>
+          </div>
+        </div>
 
-  <script src="static/libs/firebase/firebase.js"></script>
-  <script src="static/libs/firebase/firebase-simple-login.js"></script>
-  <script src="static/libs/firebase/angularfire.min.js"></script>
-  <script src="static/libs/firebase/firebase.utils.js"></script>
-  <script src="static/libs/firebase/simpleLogin.js"></script>
-  <script src="static/libs/firebase/changeEmail.js"></script>
+        
+        <div class="container">
+          <div class="row">
+           <div class="col-md-8 col-sm-8 ">
+
+             <div style="padding: 8px;">
+               <h1 class="">Company Update</h1>
+               <p>
+                 In 2012, we set out to revolutionize the manufacturing industry. Our objective was to make manufacturing accessible to everyone, enabling clients and manufacturers to scale their operations on-demand (without risky capital investment). We hoped to become the manufacturing infrastructure of the future.
+               </p>
+
+               <p>
+                During our journey we were exposed to great engineers, manufacturing, and clients; we discovered what worked, what didn’t, and many other opportunities that affected the manufacturing industries. 
+              </p>
+
+              <p>
+                Unfortunately, our attempts to change the face of manufacturing weren’t aligning with our original vision. As a result, we’ve opted to step away from ProtoExchange and re-evaluate our position in the manufacturing sector. 
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-4 " >
+            <h1 class="">&nbsp;</h1>
+            <img src="/static/images/brand/solder.jpg" class="thumbnail col-md-12 col-sm-12" />
+          </div>
+
+        </div>   
+
+        <div class="row">
+         <div class="col-md-12 col-sm-12 ">
+          <div style="padding: 8px;">
+            <p>
+            Our platform will remain accessible to all of our clients until May 27th, 2015. Any files, communications, and invoices will be available for download from the ProtoExchange dashboard. If you have any questions or need assistance during our transition, please reach out to <a href="mailto:support@protoexchange.com">"support@protoexchange.com"</a> and we’re more than happy to help!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-  <script src="static/libs/angulartics/angulartics.min.js"></script>
-  <script src="static/libs/angulartics/angulartics-ga.min.js"></script>
-  
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-56072007-1', { 'cookieDomain': 'none' });
-    ga('require', 'displayfeatures');
-  </script>
-
-  <script src="static/libs/kanzi/activeaxon_menu.js" type="text/javascript"></script> 
-  <script src="static/libs/kanzi/bootstrap.min.js" type="text/javascript"></script> 
-  <script src="static/libs/kanzi/ie-fixes.js" type="text/javascript"></script> 
-
-  <script src="static/libs/kanzi/jquery.themepunch.plugins.min.js" type="text/javascript"></script> 
-  <script src="static/libs/kanzi/jquery.themepunch.revolution.js" type="text/javascript"></script> 
-  <script src="static/libs/kanzi/jquery.tipsy.js" type="text/javascript"></script> 
-
-  <script src="static/js/apps/IndexApp.js"></script>
-  <script src="static/js/routes/IndexRoutes.js"></script>
-
-  <script src="static/js/controllers/RequestEngineerCtrl.js"></script>
-
-  <script src="static/js/controllers/kanzi.js"></script>
-  <script src="static/js/controllers/welcome.js"></script>
-  <script src="static/js/controllers/success.js"></script>
-  <script src="static/js/controllers/cancel.js"></script>
-
-  <script src="static/js/decorators.js"></script>
-  <script src="static/js/directives.js"></script>
-  <script src="static/js/filters.js"></script>
-  
-  <script src="static/js/services.js"></script>
-  <script src="static/js/config.js"></script>
+  </div>
+</div>
+</div>
 
 
-                          </body>
-                          </html>
+<script src="static/libs/angular/angular.js"></script>
+<script src="static/js/apps/HoldingPatternApp.js"></script>
+<script src="static/js/controllers/HoldingPatternCtrl.js"></script>
+
+</body>
+</html>
